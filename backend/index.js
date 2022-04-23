@@ -89,4 +89,10 @@ const User = mongoose.model('users',userSchema);
 const express = require('express');
 const app = express();
 app.use(express.json());
+
+app.get('/',(req,res)=>{
+    console.log("App working fine");
+})
+
+
 app.listen(3000);
