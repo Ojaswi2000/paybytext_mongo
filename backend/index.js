@@ -84,4 +84,9 @@ const userSchema = new Schema({
 const User = mongoose.model('users',userSchema);
 
 
-//
+// for backend and express
+
+const express = require('express');
+const app = express();
+
+app.listen(3000);
