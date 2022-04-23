@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost:27017/', {
     useNewUrlParser: true,
     useUnifiedTopology: true
         }, err => err ? console.log(err) : 
-            console.log('Connected to yourDB-name database'));
+            console.log('Connected to payByText database'));
 
 
 //Defining Schema for users of the app
@@ -88,5 +88,5 @@ const User = mongoose.model('users',userSchema);
 
 const express = require('express');
 const app = express();
-
+app.use(express.json());
 app.listen(3000);
