@@ -12,6 +12,10 @@ mongoose.connect('mongodb://localhost:27017/', {
 
 //Defining Schema for users of the app
 const userSchema = new Schema({
+    _id:{
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+    },
     accountName:{
         type: String,
         required: true
@@ -81,7 +85,7 @@ const userSchema = new Schema({
     }
 }, {timestamps: true});
 
-const User = mongoose.model('users',userSchema);
+const User = mongoose.model('User',userSchema);
 
 
 // for backend and express
@@ -99,9 +103,34 @@ app.get('/',(req,res,next)=>{
     next();
 })
 
-app.post('/',(req,res,next)=>{
-    console.log(req.body);
-    next();
+app.post('/api/v1/paybytext',(req,res,next)=>{
+    try {
+        const {body} = req;
+        const {accountName, active, accountNumber, createdOn, issuer,paymentType,
+        modifiedOn, merchantId, createdBy, executeFlag, identityId,
+        paymentMethod, walletId, modifiedBy, _id} = body;
+        
+        const user = new Schema({
+            accountName,active,accountNumber,createdOn, issuer, paymentType, modifiedOn,
+            merchantId, createdBy, executeFlag, identityId, paymentMethod:{walletId}, 
+            modifiedBy,_id
+        })
+
+        user.save()
+        .then(result => {
+            console.log(result);
+            res.status(200).json({
+                newUser: result
+            })
+        })
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            errorCode:500,
+            errorBody: error
+        })
+    }
 })
 
 app.listen(3000);
