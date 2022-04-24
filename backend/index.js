@@ -100,7 +100,8 @@ app.get('/',(req,res,next)=>{
 })
 
 app.post('/',(req,res,next)=>{
-    
+    console.log(req.body);
+    next();
 })
 
 app.listen(3000);
