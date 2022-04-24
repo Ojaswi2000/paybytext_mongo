@@ -182,8 +182,8 @@ app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
 
     } catch (error) {
         console.log(error);
-        res.status(505).json({
-            errorCode: 505,
+        res.status(500).json({
+            errorCode: 500,
             errorBody: "Internal Server error"
         })
     }
