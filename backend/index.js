@@ -112,7 +112,7 @@ app.get('/api/v1/paybytext/list/byIdentity/:id',(req,res,next)=>{
         User.findById(id)
         .then(result =>{
             res.status(200).json({
-                errorCode:200,
+                messageCode:200,
                 messageBody: result
             })
         } )
