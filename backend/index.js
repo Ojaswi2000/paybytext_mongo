@@ -89,7 +89,10 @@ const User = mongoose.model('users',userSchema);
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-app.use(express.json());
+
+//body-Parser
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 app.get('/',(req,res)=>{
     console.log("App working fine");
