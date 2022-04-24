@@ -110,7 +110,7 @@ app.post('/api/v1/paybytext',(req,res,next)=>{
         modifiedOn, merchantId, createdBy, executeFlag, identityId,
         paymentMethod, walletId, modifiedBy, _id} = body;
         
-        const user = new Schema({
+        const user = new User({
             accountName,active,accountNumber,createdOn, issuer, paymentType, modifiedOn,
             merchantId, createdBy, executeFlag, identityId, paymentMethod:{walletId}, 
             modifiedBy,_id
