@@ -165,19 +165,26 @@ app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
         const {params} = req;
         const {id} = params;
         
-        User.findByIdAndDelete(id) // delete from the database
+        User.remove({_id: id}) // delete from the database
         .then(result => {
             console.log(result);
             res.status(200).json({
                 messageCode: 200,
                 messageBody: "Sucessfully deleted the id"
             })
-    })
+        }).catch(error=>{
+            console.log(error);
+            res.status(404).json({
+                errorCode: 404,
+                errorBody: "Not found the id"
+            })
+        })
+
     } catch (error) {
         console.log(error);
-        res.status(404).json({
-            errorCode: 404,
-            errorBody: "Not found the id"
+        res.status(505).json({
+            errorCode: 505,
+            errorBody: "Internal Server error"
         })
     }
     
