@@ -94,9 +94,13 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-app.get('/',(req,res)=>{
+app.get('/',(req,res,next)=>{
     console.log("App working fine");
+    next();
 })
 
+app.post('/',(req,res,next)=>{
+    
+})
 
 app.listen(3000);
