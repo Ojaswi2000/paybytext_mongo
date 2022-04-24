@@ -159,4 +159,28 @@ app.post('/api/v1/paybytext',(req,res,next)=>{
     }
 })
 
+//delete request for a single id
+app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
+    try {
+        const {params} = req;
+        const {id} = params;
+        
+        User.findByIdAndDelete(id) // delete from the database
+        .then(result => {
+            console.log(result);
+            res.status(200).json({
+                messageCode: 200,
+                messageBody: "Sucessfully deleted the id"
+            })
+    })
+    } catch (error) {
+        console.log(error);
+        res.status(404).json({
+            errorCode: 404,
+            errorBody: "Not found the id"
+        })
+    }
+    
+})
+
 app.listen(3000);
