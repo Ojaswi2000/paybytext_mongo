@@ -103,6 +103,30 @@ app.get('/',(req,res,next)=>{
     next();
 })
 
+
+app.get('/api/v1/paybytext/list/byIdentity/:id',(req,res,next)=>{
+    try {
+        const {params} = req;
+        const {id} = params;
+        
+        User.findById(id)
+        .then(result =>{
+            res.status(200).json({
+                errorCode:200,
+                messageBody: result
+            })
+        } )
+
+    } catch (error) {
+        console.log(error);
+        res.status(404).json({
+            errorCode:400,
+            errorBody: "Not found the given id!"
+        })
+    }
+
+})
+
 app.post('/api/v1/paybytext',(req,res,next)=>{
     try {
         const {body} = req;
