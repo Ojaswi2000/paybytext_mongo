@@ -12,10 +12,6 @@ mongoose.connect('mongodb://localhost:27017/', {
 
 //Defining Schema for users of the app
 const userSchema = new Schema({
-    _id:{
-        type: String,
-        required: true,
-    },
     accountName:{
         type: String,
         required: true
@@ -132,12 +128,12 @@ app.post('/api/v1/paybytext',(req,res,next)=>{
         const {body} = req;
         const {accountName, active, accountNumber, createdOn, issuer,paymentType,
         modifiedOn, merchantId, createdBy, executeFlag, identityId,
-        paymentMethod, walletId, modifiedBy, _id} = body;
+        paymentMethod, walletId, modifiedBy} = body;
         
         const user = new User({
             accountName,active,accountNumber,createdOn, issuer, paymentType, modifiedOn,
             merchantId, createdBy, executeFlag, identityId, paymentMethod:{walletId}, 
-            modifiedBy,_id
+            modifiedBy
         })
 
         // saving in the database
@@ -165,7 +161,7 @@ app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
         const {params} = req;
         const {id} = params;
         
-        User.deleteOne({_id: id}) // delete from the database
+        User.findByIdAndDelete({_id: id}) // delete from the  database
         .then(result => {
             console.log(result);
             res.status(200).json({
