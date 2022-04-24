@@ -75,7 +75,7 @@ const userSchema = new Schema({
     paymentMethod:{
         walletId:{
             type: String,
-            required: true,
+            required: false,
         }
     },
 
