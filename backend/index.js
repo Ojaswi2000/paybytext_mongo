@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost:27017/', {
 //Defining Schema for users of the app
 const userSchema = new Schema({
     _id:{
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         required: true,
     },
     accountName:{
