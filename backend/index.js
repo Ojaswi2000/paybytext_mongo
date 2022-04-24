@@ -116,7 +116,9 @@ app.post('/api/v1/paybytext',(req,res,next)=>{
             modifiedBy,_id
         })
 
-        user.save()
+        // saving in the database
+
+        user.save()   
         .then(result => {
             console.log(result);
             res.status(200).json({
