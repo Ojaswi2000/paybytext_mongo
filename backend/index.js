@@ -1,5 +1,5 @@
-
-
+// importing The mongoose model
+const User = require('./models/user');
 
 // for backend and express
 
