@@ -100,6 +100,35 @@ app.get('/',(req,res,next)=>{
 })
 
 
+// to display all the user accounts in the browser
+app.get('/api/v1/all-users',(req,res,next)=>{
+    try {
+        User.find().sort({createdOn:-1})
+            .then(result => {
+                res.status(200).json({
+                    messageCode: 200,
+                    messageBody: result
+                })
+            })
+            .catch(error => {
+                console.log(error);
+                res.status(404).json({
+                    errorCode: 404,
+                    errorBody: error
+                })
+            })
+    } catch (error) {
+        console.log(error);
+        res.status(404).json({
+            errorCode: 404,
+            errorBody: error
+    })
+        
+}})
+
+
+
+
 app.get('/api/v1/paybytext/list/byIdentity/:id',(req,res,next)=>{
     try {
         const {params} = req;
