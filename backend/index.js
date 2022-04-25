@@ -51,7 +51,7 @@ app.get('/api/v1/paybytext/list/byIdentity/:id',(req,res,next)=>{
         const {params} = req;
         const {id} = params;
         
-        User.findById(id)
+        User.findById({_id: id})
         .then(result =>{
             res.status(200).json({
                 messageCode:200,
@@ -131,5 +131,8 @@ app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
     }
     
 })
+
+//the put request for updation of the user accounts
+app.put()
 
 app.listen(3000);
