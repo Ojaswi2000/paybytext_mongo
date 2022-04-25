@@ -69,13 +69,22 @@ app.get('/api/v1/paybytext/list/byIdentity/:id',(req,res,next)=>{
             })
         } )
 
+        .catch(error => {
+            console.log(error);
+            res.status(404).json({
+                errorCode:400,
+                errorBody: "Not found the given id!"
+        })
+    })
+
     } catch (error) {
         console.log(error);
-        res.status(404).json({
-            errorCode:400,
-            errorBody: "Not found the given id!"
+        res.status(500).json({
+            errorCode: 500,
+            errorBody: "Internal Server error"
         })
     }
+    
 
 })
 
