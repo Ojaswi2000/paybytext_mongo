@@ -61,7 +61,7 @@ app.get('/api/v1/paybytext/list/byIdentity/:id',(req,res,next)=>{
         const {params} = req;
         const {id} = params;
         
-        User.findById({_id: id})
+        User.findById(id)
         .then(result =>{
             res.status(200).json({
                 messageCode:200,
