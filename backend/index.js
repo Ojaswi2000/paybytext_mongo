@@ -107,7 +107,7 @@ app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
         const {params} = req;
         const {id} = params;
         
-        User.findByIdAndDelete({_id: id}) // delete from the  database
+        User.findByIdAndDelete({_id: id}) // delete from the database
         .then(result => {
             console.log(result);
             res.status(200).json({
