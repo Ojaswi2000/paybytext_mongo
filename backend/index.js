@@ -1,5 +1,15 @@
 // importing The mongoose model
 const User = require('./models/user');
+const mongoose = require('mongoose');
+
+
+mongoose.connect('mongodb://localhost:27017/', {
+    dbName: 'payByText',
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+        }, err => err ? console.log(err) : 
+            console.log('Connected to payByText database'));
+
 
 // for backend and express
 
@@ -133,6 +143,5 @@ app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
 })
 
 //the put request for updation of the user accounts
-app.put()
 
 app.listen(3000);
