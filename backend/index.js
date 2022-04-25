@@ -152,6 +152,41 @@ app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
 })
 
 //the put request for updation of the user accounts
+app.put('/api/v1/paybytext/:id',(req,res,next)=>{
+    try {
+        const {body, params} = req;
+        const {id} = params;
 
+        const {accountName, active, accountNumber, createdOn, issuer,paymentType,
+        modifiedOn, merchantId, createdBy, executeFlag, identityId,
+        paymentMethod, walletId, modifiedBy} = body;
+
+        User.findByIdAndUpdate(id,{
+            $set:{
+                accountName, active, accountNumber, createdOn, issuer, paymentType,
+                modifiedOn, merchantId, createdBy, executeFlag, identityId,
+                paymentMethod, walletId, modifiedBy
+            }
+        }).then(result => {
+            console.log(result);
+            res.status(200).json({
+                messageCode: 200,
+                updatedResult: result
+            })
+        }).catch(error => {
+            res.status(404).json({
+                errorCode: 404,
+                errorBody: error
+            })
+        })
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            errorCode: 500,
+            errorBody: "Internal Server error"
+        })
+    }
+})
 
 app.listen(3000);
