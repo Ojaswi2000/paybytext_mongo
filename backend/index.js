@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 app.get('/',(req,res,next)=>{
-    console.log("App working fine");
+    res.send("App working fine");
     next();
 })
 
