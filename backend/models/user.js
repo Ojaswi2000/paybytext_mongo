@@ -24,6 +24,7 @@ const userSchema = new Schema({
     createdOn:{
         type: Date,
         required: true,
+        default: Date.now,
     },
 
     issuer:{
@@ -39,6 +40,7 @@ const userSchema = new Schema({
     modifiedOn:{
         type: Date,
         required: false,
+        default: Date.now,
     },
 
     merchantId:{
@@ -64,7 +66,7 @@ const userSchema = new Schema({
     paymentMethod:{
         walletId:{
             type: String,
-            required: false,
+            required: true,
         }
     },
 

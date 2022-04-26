@@ -26,9 +26,8 @@ app.get('/',(req,res,next)=>{
     next();
 })
 
-
-// to display all the user accounts in the browser
-app.get('/api/v1/all-users',(req,res,next)=>{
+// 1. Handler for displaying all users- handleGetAllUsers
+const handleGetAllUsers = (req,res,next) => {
     try {
         User.find().sort({_id:-1})
             .then(result => {
@@ -51,12 +50,10 @@ app.get('/api/v1/all-users',(req,res,next)=>{
             errorBody: error
     })
         
-}})
+}}
 
-
-
-
-app.get('/api/v1/paybytext/list/byIdentity/:id',(req,res,next)=>{
+// 2. Handler for getting information based on a single id- handleGetPayByTextByIdentityId
+const handleGetPayByTextByIdentityId = (req,res,next) => {
     try {
         const {params} = req;
         const {id} = params;
@@ -84,11 +81,10 @@ app.get('/api/v1/paybytext/list/byIdentity/:id',(req,res,next)=>{
             errorBody: "Internal Server error"
         })
     }
-    
+}
 
-})
-
-app.post('/api/v1/paybytext',(req,res,next)=>{
+// 3. Handler for posting a new user to the database
+const handleUpsertPayByText = (req,res,next) => {
     try {
         const {body} = req;
         const {accountName, active, accountNumber, createdOn, issuer,paymentType,
@@ -97,7 +93,8 @@ app.post('/api/v1/paybytext',(req,res,next)=>{
         
         const user = new User({
             accountName,active,accountNumber,createdOn, issuer, paymentType, modifiedOn,
-            merchantId, createdBy, executeFlag, identityId, paymentMethod:{walletId}, 
+            merchantId, createdBy, executeFlag, identityId, 
+            paymentMethod:{walletId : paymentMethod.walletId}, 
             modifiedBy
         })
 
@@ -118,10 +115,11 @@ app.post('/api/v1/paybytext',(req,res,next)=>{
             errorBody: error
         })
     }
-})
+}
 
-//delete request for a single id
-app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
+
+// 4. Handler for deleting a user from the database
+const handleDeletePayByTextById = (req,res,next) => {
     try {
         const {params} = req;
         const {id} = params;
@@ -149,10 +147,11 @@ app.delete('/api/v1/paybytext/:id',(req,res,next)=>{
         })
     }
     
-})
+}
 
-//the put request for updation of the user accounts
-app.put('/api/v1/paybytext/:id',(req,res,next)=>{
+
+// 5. Handler for updating a user's details from the database
+const handleUpdatePayByText = (req,res,next) => {
     try {
         const {body, params} = req;
         const {id} = params;
@@ -187,6 +186,30 @@ app.put('/api/v1/paybytext/:id',(req,res,next)=>{
             errorBody: "Internal Server error"
         })
     }
-})
+}
+
+
+// get request to display all the user accounts in the browser
+app.get('/api/v1/all-users', handleGetAllUsers)
+
+
+
+// get request to display a user account based on a single id
+app.get('/api/v1/paybytext/list/byIdentity/:id', handleGetPayByTextByIdentityId)
+
+
+
+// post request for adding a new user to the database
+app.post('/api/v1/paybytext', handleUpsertPayByText)
+
+
+
+// delete request for a single id
+app.delete('/api/v1/paybytext/:id', handleDeletePayByTextById)
+
+
+
+// the put request for updation of a user account
+app.put('/api/v1/paybytext/:id', handleUpdatePayByText)
 
 app.listen(3000);
