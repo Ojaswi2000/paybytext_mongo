@@ -29,8 +29,8 @@ const Preferences = () => {
 
             <Form.Group controlId="language-6">
               <Form.ControlLabel className='label'>Preferred language</Form.ControlLabel>
-              <select name=''>
-
+              <select name='language' type="text" value={language} onChange={(e)=>{setLanguage(e.target.value)}} placeholder="Select a language">
+                <option>German</option>
               </select>
               <Form.HelpText tooltip>Required</Form.HelpText>
             </Form.Group>
