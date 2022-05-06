@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './styles.css'
 
 const Preferences = () => {
     const [name, setName]= useState("");
@@ -10,7 +11,7 @@ const Preferences = () => {
         <i>* Indicates Required Field</i>
         <br/>
         <div>
-            <form>
+            <form className='form-content'>
                 <label>
                     Name
                     <input type="text" name="name" value={name} 
