@@ -11,26 +11,8 @@ const Preferences = () => {
         <i>* Indicates Required Field</i>
         <br/>
         <div className='preference'>
-            <form className='form-content'>
-                <label>
-                    Name
-                    <input type="text" name="name" value={name} 
-                    onChange={(e)=>{
-                        setName(e.target.value);
-                        console.log(name);
-                    }} />
-                </label>
-
-                <label>
-                    User ID
-                    <input type="text" name="userID" value={userID}
-                    onChange={(e)=>{
-                        setUserID(e.target.value);
-                        console.log(userID);
-                    }}
-                    />
-                </label>
-            </form>
+        
+  
         </div>
     </div>
   )
