@@ -10,7 +10,7 @@ const Preferences = () => {
         <h2>My Preferences</h2>
         <i>* Indicates Required Field</i>
         <br/>
-        <div>
+        <div className='preference'>
             <form className='form-content'>
                 <label>
                     Name
