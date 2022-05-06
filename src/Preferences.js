@@ -7,6 +7,7 @@ import './styles.css'
 const Preferences = () => {
     const [name, setName]= useState("");
     const [userID, setUserID] = useState("");
+    const [language, setLanguage]=useState("");
   return (
     <div className='container'>
         <p>My Dashboard {">"} My Preferences</p>
@@ -25,10 +26,15 @@ const Preferences = () => {
               <input name="userID" type="text" value={userID} onChange={(e)=>{setUserID(e.target.value)}} />
               <Form.HelpText tooltip>Required</Form.HelpText>
             </Form.Group>
-            <Form.Group controlId="password-6">
-              <Form.ControlLabel className='label'>Password</Form.ControlLabel>
-              <input name="password" type="password" autoComplete="off" />
+
+            <Form.Group controlId="language-6">
+              <Form.ControlLabel className='label'>Preferred language</Form.ControlLabel>
+              <select name=''>
+
+              </select>
+              <Form.HelpText tooltip>Required</Form.HelpText>
             </Form.Group>
+            
             <Form.Group>
               <ButtonToolbar>
                 <Button appearance="primary">Submit</Button>
