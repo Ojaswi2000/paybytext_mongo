@@ -16,4 +16,5 @@
 .label{
     margin-left: 0;
     float: left;
+    justify-content: left;
 }
