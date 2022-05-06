@@ -17,17 +17,17 @@ const Preferences = () => {
         <Form layout="horizontal">
             <Form.Group controlId="name-6">
               <Form.ControlLabel className='label'>Name</Form.ControlLabel>
-              <Input name="name" value={name} onChange={(e)=>{setName(e.target.value)}} />
-              <Form.HelpText>Required</Form.HelpText>
+              <input type="text"  value={name} onChange={(e)=>{setName(e.target.value)}} />
+              <Form.HelpText tooltip>Required</Form.HelpText>
             </Form.Group>
             <Form.Group controlId="email-6">
               <Form.ControlLabel className='label'>UserID</Form.ControlLabel>
-              <Input name="email" type="email" value={userID} onChange={(e)=>{setUserID(e.target.value)}} />
+              <input name="userID" type="text" value={userID} onChange={(e)=>{setUserID(e.target.value)}} />
               <Form.HelpText tooltip>Required</Form.HelpText>
             </Form.Group>
             <Form.Group controlId="password-6">
               <Form.ControlLabel className='label'>Password</Form.ControlLabel>
-              <Input name="password" type="password" autoComplete="off" />
+              <input name="password" type="password" autoComplete="off" />
             </Form.Group>
             <Form.Group>
               <ButtonToolbar>
