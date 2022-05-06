@@ -9,6 +9,12 @@ const Preferences = () => {
     const [userID, setUserID] = useState("");
     const [language, setLanguage]=useState("");
     const [check, setCheck]=useState(false);
+    const handleCheck = (value,checked) =>{
+        if(checked){
+            <h2>Notification Alert !</h2>
+        }
+    }
+
   return (
     <div className='container'>
         <p>My Dashboard {">"} My Preferences</p>
@@ -41,7 +47,8 @@ const Preferences = () => {
             
             <Form.Group>
                 <h4>Pay By Text</h4>
-                <Checkbox>Enable Pay By Text</Checkbox>
+                <input style={{marginRight:"5px"}} size="large" type="checkbox" value={check} onChange={e=>setCheck(true)} />
+                Enable Pay By Text
             </Form.Group>
         
             <Form.Group>
