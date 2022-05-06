@@ -3,7 +3,10 @@ import React from 'react'
 const Preferences = () => {
   return (
     <div>
-        <h4>My Dashboard `{'>'}` My Preferences</h4>
+        <p>My Dashboard {">"} My Preferences</p>
+        <h2>My Preferences</h2>
+        <br/>
+        
     </div>
   )
 }
