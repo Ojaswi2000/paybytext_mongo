@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Form,Button, Input, ButtonToolbar} from  'rsuite';
+import {Form,Button, Input, ButtonToolbar, Checkbox} from  'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 
 import './styles.css'
@@ -8,6 +8,7 @@ const Preferences = () => {
     const [name, setName]= useState("");
     const [userID, setUserID] = useState("");
     const [language, setLanguage]=useState("");
+    const [check, setCheck]=useState(false);
   return (
     <div className='container'>
         <p>My Dashboard {">"} My Preferences</p>
@@ -39,13 +40,18 @@ const Preferences = () => {
             </Form.Group>
             
             <Form.Group>
+                <h4>Pay By Text</h4>
+                <Checkbox>Enable Pay By Text</Checkbox>
+            </Form.Group>
+        
+            <Form.Group>
               <ButtonToolbar>
                 <Button appearance="primary">Submit</Button>
                 <Button appearance="default">Cancel</Button>
               </ButtonToolbar>
             </Form.Group>
         </Form>
-  
+  {}
         </div>
     </div>
   )
