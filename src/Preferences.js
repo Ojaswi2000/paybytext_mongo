@@ -22,7 +22,12 @@ const Preferences = () => {
 
                 <label>
                     User ID
-                    <input type="text" name='' />
+                    <input type="text" name="userID" value={userID}
+                    onChange={(e)=>{
+                        setUserID(e.target.value);
+                        console.log(userID);
+                    }}
+                    />
                 </label>
             </form>
         </div>
