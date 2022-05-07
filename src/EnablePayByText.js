@@ -26,12 +26,13 @@ const EnablePayByText = ({formData,setFormData}) => {
     </Form.Group>
     <Form.Group controlId="notification-6" >
         <Form.ControlLabel className='label'>Pay By Text Notification</Form.ControlLabel>
-        <input
+        <input style={{width:"50px" ,marginBottom:"10px"}}
             type="number"
             value={formData.days}
             onChange={(e)=>{setFormData({...formData, days: e.target.value})}}/>
         <p>days prior to invoice due date</p>
     </Form.Group>
+    <hr/>
     
     </div>
   )
