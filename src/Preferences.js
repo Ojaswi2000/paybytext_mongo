@@ -58,6 +58,17 @@ const Preferences = () => {
                 {
                   toggleCheck && <EnablePayByText formData={formData} setFormData={setFormData} />
                 }
+
+
+            <Form.Group>
+                <h4>Setup PDF Invoice</h4>
+                <input style={{marginRight:"5px"}} size="large" type="checkbox"
+                onClick={()=>{
+                  setToggleCheck(!toggleCheck);
+                }}
+                />
+                Create password for PDF invoice
+            </Form.Group>
             <Form.Group>
               <ButtonToolbar>
                 <Button appearance="primary">Submit</Button>
