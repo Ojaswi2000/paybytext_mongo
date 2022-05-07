@@ -1,8 +1,11 @@
-import React from 'react'
-import { Notification,Checkbox, Button } from 'rsuite'
+import React,{useState} from 'react'
+import { Notification,Checkbox, Button,ButtonToolbar,Modal } from 'rsuite'
 import './styles.css'
 
-const EmailNotification = ({formData,setFormData}) => {
+const EmailNotification = ({formData}) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
     const Message = React.forwardRef(({ type, ...rest }, ref) => {
         return (
           <Notification ref={ref} {...rest} type={type} header={type}>
@@ -18,7 +21,28 @@ const EmailNotification = ({formData,setFormData}) => {
     <Checkbox style={{display:"flex"}}>{formData.days} days prior to invoice due date</Checkbox>
     <Checkbox style={{display:"flex"}}>When my invoice is ready for viewing</Checkbox>
     <br/>
-    <Button style={{marginLeft:"150px"}} color='cyan' appearance='primary'>Notify Me</Button>
+    <div className="modal-container">
+      <ButtonToolbar>
+        <Button onClick={handleOpen} color='cyan' appearance='primary'> Open</Button>
+      </ButtonToolbar>
+
+      <Modal open={open} onClose={handleClose}>
+        <Modal.Header>
+          <Modal.Title>Modal Title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={handleClose} appearance="primary">
+            Ok
+          </Button>
+          <Button onClick={handleClose} appearance="subtle">
+            Cancel
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
     <hr/>
     </div>
   )
