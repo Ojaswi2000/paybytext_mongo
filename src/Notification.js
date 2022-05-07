@@ -10,7 +10,7 @@ const Notification = () => {
       });
   return (
     <div>
-
+        <Message type="info" />
     </div>
   )
 }
