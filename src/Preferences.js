@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Form,Button, ButtonToolbar, Checkbox} from  'rsuite';
+import {Form,Button, ButtonToolbar} from  'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 
 import './styles.css'
