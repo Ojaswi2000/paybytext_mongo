@@ -1,5 +1,5 @@
 import React from 'react'
-import { Notification } from 'rsuite'
+import { Notification,Checkbox } from 'rsuite'
 import './styles.css'
 
 const EmailNotification = () => {
@@ -14,6 +14,9 @@ const EmailNotification = () => {
     <div>
     <Message type="info" />
     <hr />
+    <Checkbox style={{display:"flex"}}>When my invoice is ready for viewing</Checkbox>
+    <Checkbox style={{display:"flex"}}>When my invoice is ready for viewing</Checkbox>
+    <Checkbox style={{display:"flex"}}>When my invoice is ready for viewing</Checkbox>
     </div>
   )
 }
