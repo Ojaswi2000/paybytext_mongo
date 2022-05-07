@@ -13,6 +13,7 @@ const EnablePayByText = () => {
     <div>
     <Message type="info" />
     <hr />
+    <p style={{color:"green"}}>How does Pay By text Work?</p>
     </div>
   )
 }
