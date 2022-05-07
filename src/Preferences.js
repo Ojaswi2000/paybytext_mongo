@@ -10,7 +10,8 @@ const Preferences = () => {
       name:"",
       userID:"",
       language:"",
-      mobileNo:""
+      mobileNo:"",
+      days:""
     }
     const [formData,setFormData]= useState(clearData);
     const [toggleCheck, setToggleCheck]=useState(false);
