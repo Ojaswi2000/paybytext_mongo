@@ -76,7 +76,7 @@ const Preferences = () => {
               <h4>Notifications</h4>
               <p>Notifications will be sent to the userID: {formData.userID}</p>
               <br/>
-              <EmailNotification />
+              <EmailNotification formData={formData} setFormData={setFormData} />
 
             <Form.Group>
               <ButtonToolbar>

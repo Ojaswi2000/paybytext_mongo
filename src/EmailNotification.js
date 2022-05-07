@@ -2,7 +2,7 @@ import React from 'react'
 import { Notification,Checkbox } from 'rsuite'
 import './styles.css'
 
-const EmailNotification = () => {
+const EmailNotification = ({formData,setFormData}) => {
     const Message = React.forwardRef(({ type, ...rest }, ref) => {
         return (
           <Notification ref={ref} {...rest} type={type} header={type}>
@@ -15,7 +15,7 @@ const EmailNotification = () => {
     <Message type="info" />
     <hr />
     <Checkbox style={{display:"flex"}}>When my invoice is ready for viewing</Checkbox>
-    <Checkbox style={{display:"flex"}}>When my invoice is ready for viewing</Checkbox>
+    <Checkbox style={{display:"flex"}}>{formData.days} days prior to invoice due date</Checkbox>
     <Checkbox style={{display:"flex"}}>When my invoice is ready for viewing</Checkbox>
     </div>
   )
