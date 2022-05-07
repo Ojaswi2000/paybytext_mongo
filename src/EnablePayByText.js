@@ -24,6 +24,14 @@ const EnablePayByText = ({formData,setFormData}) => {
             value={formData.mobileNo}
             onChange={(e)=>{setFormData({...formData, mobileNo: e.target.value})}}/>
     </Form.Group>
+    <Form.Group controlId="notification-6">
+        <Form.ControlLabel className='label'>Pay By Text Notification</Form.ControlLabel>
+        <input
+            type="number"
+            value={formData.mobileNo}
+            onChange={(e)=>{setFormData({...formData, mobileNo: e.target.value})}}/>
+    </Form.Group>
+    
     </div>
   )
 }
