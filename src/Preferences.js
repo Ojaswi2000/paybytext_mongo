@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Form,Button, ButtonToolbar} from  'rsuite';
 import 'rsuite/dist/rsuite.min.css';
+import EnablePayByText from './EnablePayByText';
 
 import './styles.css'
 
@@ -49,7 +50,9 @@ const Preferences = () => {
                 />
                 Enable Pay By Text
             </Form.Group>
-        
+                {
+                  toggleCheck && <EnablePayByText />
+                }
             <Form.Group>
               <ButtonToolbar>
                 <Button appearance="primary">Submit</Button>
