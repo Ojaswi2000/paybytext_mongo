@@ -31,7 +31,18 @@ const EmailNotification = ({formData}) => {
           <Modal.Title>Pay By Text Notification</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+        {
+          formData.name && formData.userID ?
+          <p>Hello {formData.name} !!
           The notifications for the pay by text will be sent to your userID: <span style={{fontWeight:"bold"}}>{formData.userID}</span>. 
+          You have {formData.days} prior to your invoice date.
+          </p>:
+
+          <p>Please enter your name and userID</p>
+          
+        }
+
+          
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={handleClose} appearance="primary">
