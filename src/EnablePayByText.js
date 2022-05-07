@@ -10,6 +10,7 @@ const EnablePayByText = ({formData,setFormData}) => {
           </Notification>
         );
       });
+      console.log(formData);
   return (
     <div>
     <Message type="info" />
