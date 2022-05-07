@@ -42,7 +42,11 @@ const Preferences = () => {
             
             <Form.Group>
                 <h4>Pay By Text</h4>
-                <input style={{marginRight:"5px"}} size="large" type="checkbox" />
+                <input style={{marginRight:"5px"}} size="large" type="checkbox"
+                onClick={()=>{
+                  setToggleCheck(!toggleCheck);
+                }}
+                />
                 Enable Pay By Text
             </Form.Group>
         
