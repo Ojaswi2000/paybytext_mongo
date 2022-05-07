@@ -15,6 +15,7 @@ const Preferences = () => {
     }
     const [formData,setFormData]= useState(clearData);
     const [toggleCheck, setToggleCheck]=useState(false);
+    const [invoiceCheck, setInvoiceCheck]=useState(false);
 
   return (
     <div className='container'>
@@ -64,7 +65,7 @@ const Preferences = () => {
                 <h4>Setup PDF Invoice</h4>
                 <input style={{marginRight:"5px"}} size="large" type="checkbox"
                 onClick={()=>{
-                  setToggleCheck(!toggleCheck);
+                  setInvoiceCheck(!invoiceCheck);
                 }}
                 />
                 Create password for PDF invoice
