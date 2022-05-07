@@ -18,7 +18,7 @@ const EmailNotification = ({formData,setFormData}) => {
     <Checkbox style={{display:"flex"}}>{formData.days} days prior to invoice due date</Checkbox>
     <Checkbox style={{display:"flex"}}>When my invoice is ready for viewing</Checkbox>
     <br/>
-    <Button color='cyan'>Notify Me</Button>
+    <Button style={{marginLeft:"150px"}} color='cyan' appearance='primary'>Notify Me</Button>
     </div>
   )
 }
