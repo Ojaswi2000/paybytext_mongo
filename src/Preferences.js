@@ -6,9 +6,13 @@ import EnablePayByText from './EnablePayByText';
 import './styles.css'
 
 const Preferences = () => {
-    const [name, setName]= useState("");
-    const [userID, setUserID] = useState("");
-    const [language, setLanguage]=useState("");
+    const clearData={
+      name:"",
+      userID:"",
+      language:"",
+      mobileNo:""
+    }
+    const [formData,setFormData]= useState(clearData);
     const [toggleCheck, setToggleCheck]=useState(false);
 
   return (
@@ -21,18 +25,18 @@ const Preferences = () => {
         <Form layout="horizontal">
             <Form.Group controlId="name-6">
               <Form.ControlLabel className='label'>Name</Form.ControlLabel>
-              <input type="text"  value={name} onChange={(e)=>{setName(e.target.value)}} />
+              <input type="text"  value={formData.name} onChange={(e)=>{setFormData({...formData, name:e.target.value  })}} />
               <Form.HelpText tooltip>Required</Form.HelpText>
             </Form.Group>
             <Form.Group controlId="email-6">
               <Form.ControlLabel className='label'>UserID</Form.ControlLabel>
-              <input name="userID" type="text" value={userID} onChange={(e)=>{setUserID(e.target.value)}} />
+              <input name="userID" type="text" value={formData.userID} onChange={(e)=>{setFormData({...formData, userID:e.target.value  })}} />
               <Form.HelpText tooltip>Required</Form.HelpText>
             </Form.Group>
 
             <Form.Group controlId="language-6">
               <Form.ControlLabel className='label'>Preferred language</Form.ControlLabel>
-              <select name='language' type="text" value={language} onChange={(e)=>{setLanguage(e.target.value)}} placeholder="Select a language">
+              <select name='language' type="text" value={formData.language} onChange={(e)=>{setFormData({...formData, language:e.target.value  })}} placeholder="Select a language">
                 <option>German</option> <option>French</option> <option>English</option>
                 <option>Hindi</option> <option>Chinese</option> <option>Russian</option>
                 <option>Spanish</option> <option>Arabic</option> <option>Portuguese</option>
