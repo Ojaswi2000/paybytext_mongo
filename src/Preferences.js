@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import {Form,Button, ButtonToolbar} from  'rsuite';
+import {Form} from  'rsuite';
 import 'rsuite/dist/rsuite.min.css';
+import SubmitModal from './components/SubmitModal';
 import EmailNotification from './EmailNotification';
 import EnablePayByText from './EnablePayByText';
 import './styles.css'
@@ -78,10 +79,10 @@ const Preferences = () => {
               <br/>
               <EmailNotification formData={formData} setFormData={setFormData} />
 
-            <Form.Group>
-             
-            </Form.Group>
-            
+          <Form.Group>
+            <SubmitModal />
+          </Form.Group>
+      
         </Form>
   
         </div>
