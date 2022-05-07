@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Form,Button, Input, ButtonToolbar, Checkbox} from  'rsuite';
+import {Form,Button, ButtonToolbar, Checkbox} from  'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 
 import './styles.css'
@@ -8,12 +8,7 @@ const Preferences = () => {
     const [name, setName]= useState("");
     const [userID, setUserID] = useState("");
     const [language, setLanguage]=useState("");
-    const [check, setCheck]=useState(false);
-    const handleCheck = (value,checked) =>{
-        if(checked){
-            <h2>Notification Alert !</h2>
-        }
-    }
+    const [toggleCheck, setToggleCheck]=useState(false);
 
   return (
     <div className='container'>
@@ -47,7 +42,7 @@ const Preferences = () => {
             
             <Form.Group>
                 <h4>Pay By Text</h4>
-                <input style={{marginRight:"5px"}} size="large" type="checkbox" value={check} onChange={e=>setCheck(true)} />
+                <input style={{marginRight:"5px"}} size="large" type="checkbox" />
                 Enable Pay By Text
             </Form.Group>
         
@@ -57,8 +52,9 @@ const Preferences = () => {
                 <Button appearance="default">Cancel</Button>
               </ButtonToolbar>
             </Form.Group>
+            
         </Form>
-  {}
+  
         </div>
     </div>
   )
