@@ -1,5 +1,8 @@
 import React from 'react'
 import { Notification } from 'rsuite'
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+import './styles.css'
 
 const EnablePayByText = () => {
     const Message = React.forwardRef(({ type, ...rest }, ref) => {
@@ -14,6 +17,7 @@ const EnablePayByText = () => {
     <Message type="info" />
     <hr />
     <p style={{color:"green"}}>How does Pay By text Work?</p>
+
     </div>
   )
 }
