@@ -28,7 +28,7 @@ const EmailNotification = ({formData}) => {
 
       <Modal open={open} onClose={handleClose}>
         <Modal.Header>
-          <Modal.Title>Modal Title</Modal.Title>
+          <Modal.Title>Pay By Text Notification</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           
