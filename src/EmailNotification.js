@@ -19,6 +19,7 @@ const EmailNotification = ({formData,setFormData}) => {
     <Checkbox style={{display:"flex"}}>When my invoice is ready for viewing</Checkbox>
     <br/>
     <Button style={{marginLeft:"150px"}} color='cyan' appearance='primary'>Notify Me</Button>
+    <hr/>
     </div>
   )
 }
