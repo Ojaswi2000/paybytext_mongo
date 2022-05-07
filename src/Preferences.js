@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {Form,Button, ButtonToolbar} from  'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 import EnablePayByText from './EnablePayByText';
-import Notification from './Notification';
+//import Notification from './Notification';
 import './styles.css'
 
 const Preferences = () => {
@@ -75,8 +75,6 @@ const Preferences = () => {
             }
               <h4>Notifications</h4>
               <p>Notifications will be sent to the userID: {formData.userID}</p>
-              <Notification />
-
 
 
             <Form.Group>
