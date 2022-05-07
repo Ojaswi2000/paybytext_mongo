@@ -23,7 +23,7 @@ const EmailNotification = ({formData}) => {
     <br/>
     <div className="modal-container">
       <ButtonToolbar>
-        <Button onClick={handleOpen} color='cyan' appearance='primary'> Open</Button>
+        <Button style={{marginLeft:"150px"}} onClick={handleOpen} color='cyan' appearance='primary'> Notify Me</Button>
       </ButtonToolbar>
 
       <Modal open={open} onClose={handleClose}>
