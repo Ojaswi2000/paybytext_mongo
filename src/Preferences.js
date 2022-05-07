@@ -70,6 +70,17 @@ const Preferences = () => {
                 />
                 Create password for PDF invoice
             </Form.Group>
+            {
+
+            }
+            <Form.Group>
+              <h4>Notifications</h4>
+              <p>Notifications will be sent to the userID: {formData.userID}</p>
+            </Form.Group>
+
+
+
+
             <Form.Group>
               <ButtonToolbar>
                 <Button appearance="primary">Submit</Button>
