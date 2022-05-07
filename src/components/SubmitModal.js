@@ -19,12 +19,16 @@ const SubmitModal = ({formData}) => {
         <Modal.Body>
         {
           formData.name && formData.userID ?
-          <p>Hello {formData.name} !!
-          The notifications for the pay by text will be sent to your userID: <span style={{fontWeight:"bold"}}>{formData.userID}</span>. 
+          <p>Hello <span style={{fontWeight:"bold"}}>{formData.name}</span> !!
+          <hr/>We have saved your changes. Your saved changes are shown as follows:<br/>
+          Name :<span style={{fontWeight:"bold"}}>{formData.name}</span> <br/>
+          UserID :<span style={{fontWeight:"bold"}}>{formData.userID}</span> <br/>
+          Language :<span style={{fontWeight:"bold"}}>{formData.language}</span> <br/>
+          Mobile Number :<span style={{fontWeight:"bold"}}>{formData.mobileNo}</span> <br/>
           You have {formData.days} prior to your invoice date.
           </p>:
 
-          <p>Please enter your name and userID</p>
+          <p>Please enter your your relevant information</p>
           
         }
 
