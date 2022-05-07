@@ -80,7 +80,7 @@ const Preferences = () => {
               <EmailNotification formData={formData} setFormData={setFormData} />
 
           <Form.Group>
-            <SubmitModal />
+            <SubmitModal formData={formData} />
           </Form.Group>
       
         </Form>
