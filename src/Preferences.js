@@ -55,7 +55,7 @@ const Preferences = () => {
                 Enable Pay By Text
             </Form.Group>
                 {
-                  toggleCheck && <EnablePayByText />
+                  toggleCheck && <EnablePayByText formData={formData} setFormData={setFormData} />
                 }
             <Form.Group>
               <ButtonToolbar>
