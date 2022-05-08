@@ -31,3 +31,7 @@
 .preference input:hover{
     border-color: rgb(89, 89, 240);
 }
+
+.profile{
+    margin-left: 20px;
+}
