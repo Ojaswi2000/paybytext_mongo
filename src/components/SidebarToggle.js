@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {Nav, Navbar, Dropdown, Sidebar, Sidenav, Container} from 'rsuite'
+import {Nav, Navbar, Dropdown, Sidebar, Sidenav} from 'rsuite'
 
 const headerStyles = {
     padding: 18,
