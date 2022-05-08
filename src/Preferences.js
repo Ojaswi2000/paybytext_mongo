@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Form} from  'rsuite';
+import {Form,Button} from  'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 import SidebarToggle from './components/SidebarToggle';
 import SubmitModal from './components/SubmitModal';
@@ -9,8 +9,12 @@ import './styles.css'
 
 const Preferences = () => {
 
+  const [size, setSize] = useState('xs');   //for dashboard toggle
+  const [open, setOpen] = useState(false);  //for dashboard toggle
+  const [placement, setPlacement] = useState();   //for dashboard toggle
+
   const handleOpen = key => {
-    setOpen(true);              //for dashboard drawer
+    setOpen(true);                          //for dashboard toggle
     setPlacement(key);
   };
 
@@ -27,7 +31,7 @@ const Preferences = () => {
 
   return (
     <div className='container'>
-        <p>My Dashboard {">"} My Preferences</p>
+        <p><Button>My Dashboard</Button> {">"} My Preferences</p>
         <h2>My Preferences</h2>
         <i>* Indicates Required Field</i>
         <br/>
@@ -93,7 +97,7 @@ const Preferences = () => {
         </Form>
             
         </div>
-        <SidebarToggle handleOpen={handleOpen} />
+        <SidebarToggle handleOpen={handleOpen} size={size} setSize={setSize} placement={placement} setPlacement={setPlacement} open={open} setOpen={setOpen} />
     </div>
   )
 }
