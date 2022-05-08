@@ -38,6 +38,7 @@ const styles = {
             <h5><GlobalIcon className='icon' />Language Preferred:<br/><span className='detail'>{formData.language}</span></h5><br/>
             <h5><MobileIcon className='icon' />Mobile Number:<br/><span className='detail'>{formData.mobileNo}</span></h5><br/>
             <h5><PhoneFillIcon className='icon'/>Days prior to invoice:<br/><span className='detail'>{formData.days}</span></h5><br/>
+            <hr/>
           </div>
         </Drawer.Body>
       </Drawer>

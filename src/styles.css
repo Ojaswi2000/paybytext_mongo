@@ -50,5 +50,5 @@
 
 .detail:hover{
     color: darkcyan;
-    border-left: 2px solid red;
+    border-left: 2px solid darkcyan;
 }

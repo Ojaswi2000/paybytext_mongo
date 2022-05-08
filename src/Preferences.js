@@ -32,7 +32,7 @@ const Preferences = () => {
 
   return (
     <div className='container'>
-        <p><Button onClick={()=>handleOpen('left')} color='blue' appearance='primary'><DashboardIcon />My Dashboard</Button> {">"} My Preferences</p>
+        <p><Button onClick={()=>handleOpen('right')} color='blue' appearance='primary'><DashboardIcon />My Dashboard</Button> {">"} My Preferences</p>
         <h2>My Preferences</h2>
         <i>* Indicates Required Field</i>
         <br/>
