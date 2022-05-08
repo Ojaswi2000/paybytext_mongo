@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {Form,Button} from  'rsuite';
 import 'rsuite/dist/rsuite.min.css';
-import SidebarToggle from './components/SidebarToggle';
+import DashboardToggle from './components/DashboardToggle';
 import SubmitModal from './components/SubmitModal';
 import EmailNotification from './EmailNotification';
 import EnablePayByText from './EnablePayByText';
@@ -31,7 +31,7 @@ const Preferences = () => {
 
   return (
     <div className='container'>
-        <p><Button>My Dashboard</Button> {">"} My Preferences</p>
+        <p><Button onClick={()=>handleOpen('left')} color='blue' appearance='primary'>My Dashboard</Button> {">"} My Preferences</p>
         <h2>My Preferences</h2>
         <i>* Indicates Required Field</i>
         <br/>
@@ -97,7 +97,7 @@ const Preferences = () => {
         </Form>
             
         </div>
-        <SidebarToggle handleOpen={handleOpen} size={size} setSize={setSize} placement={placement} setPlacement={setPlacement} open={open} setOpen={setOpen} />
+        <DashboardToggle handleOpen={handleOpen} size={size} setSize={setSize} placement={placement} setPlacement={setPlacement} open={open} setOpen={setOpen} />
     </div>
   )
 }
