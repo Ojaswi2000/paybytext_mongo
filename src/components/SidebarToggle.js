@@ -39,7 +39,7 @@ const headerStyles = {
   
           <Nav pullRight>
             <Nav.Item onClick={onChange} style={{ width: 56, textAlign: 'center' }}>
-              {expand ? <AngleLeft /> : <AngleRight />}
+              {/* {expand ? <AngleLeft /> : <AngleRight />} */}
             </Nav.Item>
           </Nav>
         </Navbar.Body>
@@ -52,7 +52,7 @@ const SidebarToggle = () => {
   const [expand, setExpand] = useState(true);
   return (
     <div className="show-fake-browser sidebar-page">
-      <Container>
+      <div>
         <Sidebar
           style={{ display: 'flex', flexDirection: 'column' }}
           width={expand ? 260 : 56}
@@ -67,10 +67,10 @@ const SidebarToggle = () => {
           <Sidenav expanded={expand} defaultOpenKeys={['3']} appearance="subtle">
             <Sidenav.Body>
               <Nav>
-                <Nav.Item eventKey="1" active icon={<Dashboard />}>
+                <Nav.Item eventKey="1" active >
                   Dashboard
                 </Nav.Item>
-                <Nav.Item eventKey="2" icon={<Group />}>
+                <Nav.Item eventKey="2" >
                   User Group
                 </Nav.Item>
                 <Dropdown
@@ -105,13 +105,8 @@ const SidebarToggle = () => {
           <NavToggle expand={expand} onChange={() => setExpand(!expand)} />
         </Sidebar>
 
-        <Container>
-          <Header>
-            <h2>Page Title</h2>
-          </Header>
-          <Content>Content</Content>
-        </Container>
-      </Container>
+        
+      </div>
     </div>
   )
 }
