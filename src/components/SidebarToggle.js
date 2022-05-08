@@ -60,7 +60,7 @@ const SidebarToggle = () => {
         >
           <Sidenav.Header>
             <div style={headerStyles}>
-              <LogoAnalytics style={{ fontSize: 20 }} />
+              {/* <LogoAnalytics style={{ fontSize: 20 }} /> */}
               <span style={{ marginLeft: 12 }}> BRAND</span>
             </div>
           </Sidenav.Header>
@@ -77,7 +77,7 @@ const SidebarToggle = () => {
                   eventKey="3"
                   trigger="hover"
                   title="Advanced"
-                  icon={<Magic />}
+                  // icon={<Magic />}
                   placement="rightStart"
                 >
                   <Dropdown.Item eventKey="3-1">Geo</Dropdown.Item>
@@ -90,7 +90,7 @@ const SidebarToggle = () => {
                   eventKey="4"
                   trigger="hover"
                   title="Settings"
-                  icon={<GearCircle />}
+                  // icon={<GearCircle />}
                   placement="rightStart"
                 >
                   <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
