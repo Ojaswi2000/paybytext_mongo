@@ -16,7 +16,7 @@ const styles = {
   }
 };
 
- const DashboardToggle = ({size,placement,open,setOpen}) => {
+ const DashboardToggle = ({size,placement,open,setOpen,formData}) => {
   
   return (
     <Drawer size={size} placement={placement} open={open} onClose={() => setOpen(false)}>

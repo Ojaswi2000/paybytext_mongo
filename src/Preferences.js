@@ -98,7 +98,7 @@ const Preferences = () => {
         </Form>
             
         </div>
-        <DashboardToggle handleOpen={handleOpen} size={size} setSize={setSize} placement={placement} setPlacement={setPlacement} open={open} setOpen={setOpen} />
+        <DashboardToggle handleOpen={handleOpen} size={size} setSize={setSize} placement={placement} setPlacement={setPlacement} open={open} setOpen={setOpen} formData={formData} />
     </div>
   )
 }

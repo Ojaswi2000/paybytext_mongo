@@ -34,9 +34,11 @@
 
 .profile{
     margin-left: 20px;
+    display: block;
 }
 
 .icon{
-    color: rgb(89, 89, 240);
+    color: black;
     margin-right: 20px;
+    size: 30px;
 }
