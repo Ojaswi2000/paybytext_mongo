@@ -26,7 +26,7 @@ app.get('/preferences',(req,res,next)=>{
 })
 
 app.get('/',(req,res,next)=>{
-    res.redirect('/preferences');
+    res.send('App working fine');
     next();
 })
 // 1. Handler for displaying all users- handleGetAllUsers

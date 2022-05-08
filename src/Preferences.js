@@ -5,6 +5,7 @@ import DashboardToggle from './components/DashboardToggle';
 import SubmitModal from './components/SubmitModal';
 import EmailNotification from './EmailNotification';
 import EnablePayByText from './EnablePayByText';
+import DashboardIcon from '@rsuite/icons/Dashboard';
 import './styles.css'
 
 const Preferences = () => {
@@ -31,7 +32,7 @@ const Preferences = () => {
 
   return (
     <div className='container'>
-        <p><Button onClick={()=>handleOpen('left')} color='blue' appearance='primary'>My Dashboard</Button> {">"} My Preferences</p>
+        <p><Button onClick={()=>handleOpen('left')} color='blue' appearance='primary'><DashboardIcon />My Dashboard</Button> {">"} My Preferences</p>
         <h2>My Preferences</h2>
         <i>* Indicates Required Field</i>
         <br/>
