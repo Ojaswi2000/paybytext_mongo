@@ -1,12 +1,19 @@
 import React, { useState } from 'react'
 import {Form} from  'rsuite';
 import 'rsuite/dist/rsuite.min.css';
+import SidebarToggle from './components/SidebarToggle';
 import SubmitModal from './components/SubmitModal';
 import EmailNotification from './EmailNotification';
 import EnablePayByText from './EnablePayByText';
 import './styles.css'
 
 const Preferences = () => {
+
+  const handleOpen = key => {
+    setOpen(true);              //for dashboard drawer
+    setPlacement(key);
+  };
+
     const clearData={
       name:"",
       userID:"",
@@ -84,8 +91,9 @@ const Preferences = () => {
           </Form.Group>
       
         </Form>
-  
+            
         </div>
+        <SidebarToggle handleOpen={handleOpen} />
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import LandingPage from './LandingPage'
 import './styles.css'
 
-function App() {
+const App = () => {
   return (
     <div className='App'>
       <LandingPage />
