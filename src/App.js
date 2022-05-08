@@ -1,11 +1,11 @@
 import React from 'react'
-import LandingPage from './LandingPage'
+import Preferences from './Preferences'
 import './styles.css'
 
 const App = () => {
   return (
     <div className='App'>
-      <LandingPage />
+      <Preferences />
     </div>
   )
 }
