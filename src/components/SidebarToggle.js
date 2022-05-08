@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Nav, Navbar, Dropdown, Sidebar, Sidenav, Container} from 'rsuite'
 
 const headerStyles = {
@@ -49,6 +49,7 @@ const headerStyles = {
   
 
 const SidebarToggle = () => {
+  const [expand, setExpand] = useState(true);
   return (
     <div>
 
