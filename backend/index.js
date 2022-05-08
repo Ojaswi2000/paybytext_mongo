@@ -21,11 +21,14 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-app.get('/',(req,res,next)=>{
-    res.send("App working fine");
-    next();
+app.get('/preferences',(req,res,next)=>{
+    res.redirect('../src/App.js')
 })
 
+app.get('/',(req,res,next)=>{
+    res.redirect('/preferences');
+    next();
+})
 // 1. Handler for displaying all users- handleGetAllUsers
 const handleGetAllUsers = (req,res,next) => {
     try {
