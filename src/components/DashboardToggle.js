@@ -33,11 +33,11 @@ const styles = {
           <h4><AdminIcon className='icon'/>Your Profile</h4>
           <hr/>
           <div className='profile'>
-            <h5><MemberIcon className='icon'/>Name:</h5>
-            <h5><EmailFillIcon className='icon' />UserID:</h5>
-            <h5><GlobalIcon className='icon' />Language Preferred:</h5>
-            <h5><MobileIcon className='icon' />Mobile Number:</h5>
-            <h5><PhoneFillIcon className='icon'/>Days prior to invoice</h5>
+            <h5><MemberIcon className='icon'/>Name:<br/><span className='detail'>{formData.name}</span></h5><br/>
+            <h5><EmailFillIcon className='icon' />UserID:<br/><span className='detail'>{formData.userID}</span></h5><br/>
+            <h5><GlobalIcon className='icon' />Language Preferred:<br/><span className='detail'>{formData.language}</span></h5><br/>
+            <h5><MobileIcon className='icon' />Mobile Number:<br/><span className='detail'>{formData.mobileNo}</span></h5><br/>
+            <h5><PhoneFillIcon className='icon'/>Days prior to invoice:<br/><span className='detail'>{formData.days}</span></h5><br/>
           </div>
         </Drawer.Body>
       </Drawer>

@@ -42,3 +42,13 @@
     margin-right: 20px;
     size: 30px;
 }
+
+.detail{
+    margin-left: 38px;
+    font-weight: lighter;
+}
+
+.detail:hover{
+    color: darkcyan;
+    border-left: 2px solid red;
+}
