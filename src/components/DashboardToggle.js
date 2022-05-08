@@ -2,6 +2,10 @@ import React from 'react'
 import {Drawer,Button} from 'rsuite'
 import AdminIcon from '@rsuite/icons/Admin';
 import MemberIcon from '@rsuite/icons/Member';
+import EmailFillIcon from '@rsuite/icons/EmailFill';
+import GlobalIcon from '@rsuite/icons/Global';
+import MobileIcon from '@rsuite/icons/Mobile';
+import PhoneFillIcon from '@rsuite/icons/PhoneFill';
 import '../styles.css';
 
 const styles = {
@@ -26,14 +30,14 @@ const styles = {
           </Drawer.Actions>
         </Drawer.Header>
         <Drawer.Body>
-          <h4><AdminIcon color='blue' style={{marginRight:"5px"}}/>Your Profile</h4>
+          <h4><AdminIcon className='icon'/>Your Profile</h4>
           <hr/>
           <div className='profile'>
-            <h5><MemberIcon color='blue' style={{marginRight:"5px"}}/>Name:</h5>
-            <h5>UserID:</h5>
-            <h5>Language Preferred:</h5>
-            <h5>Mobile Number:</h5>
-            <h5>Days prior to invoice:</h5>
+            <h5><MemberIcon className='icon'/>Name:</h5>
+            <h5><EmailFillIcon className='icon' />UserID:</h5>
+            <h5><GlobalIcon className='icon' />Language Preferred:</h5>
+            <h5><MobileIcon className='icon' />Mobile Number:</h5>
+            <h5><PhoneFillIcon className='icon'/>Days prior to invoice</h5>
           </div>
         </Drawer.Body>
       </Drawer>
