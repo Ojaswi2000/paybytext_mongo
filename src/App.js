@@ -13,6 +13,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/preferences' element={<Preferences />} />
+          <Route path='/' element={<Preferences />} />
           <Route path='/MyAutomaticPayments' element={<MyAutomaticPayments />} />
           <Route path='/MyPlanInvoices' element={<MyPlanInvoices />} />
           <Route path='/Wallet' element={<Wallet />} />
