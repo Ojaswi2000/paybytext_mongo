@@ -10,7 +10,7 @@ import Sidebar from './components/Sidebar'
 
 const App = () => {
   return (
-    <div className='App'>
+    <>
       <Router>
         <Sidebar>
           <Routes>
@@ -24,7 +24,7 @@ const App = () => {
         </Sidebar>
       </Router>
       
-    </div>
+    </>
   )
 }
 
