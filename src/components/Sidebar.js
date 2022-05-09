@@ -35,7 +35,7 @@ const Sidebar = ({children}) => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div className='main-container' >
-        <motion.div animate={{width: isOpen ? "200px" : "45px"}} className='sidebar' >
+        <motion.div animate={{width: isOpen ? "250px" : "45px"}} className='sidebar' >
 
           <div className='top_section'>
             {isOpen && <h1 className='logo'>UPS Payments</h1>}
@@ -49,7 +49,7 @@ const Sidebar = ({children}) => {
             <div className='search_icon'>
               <BiSearch />
             </div>
-            <input placeholder='Search...' />
+            {isOpen && <input placeholder='Search...' />}
           </div>
 
           <section className='routes' >
