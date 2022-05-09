@@ -6,19 +6,22 @@ import MyAutomaticPayments from './components/pages/MyAutomaticPayments'
 import Wallet from './components/pages/Wallet'
 import MyPlanInvoices from './components/pages/MyPlanInvoices'
 import './styles.css'
+import Sidebar from './components/Sidebar'
 
 const App = () => {
   return (
     <div className='App'>
       <Router>
-        <Routes>
-          <Route path='/preferences' element={<Preferences />} />
-          <Route path='/' element={<Preferences />} />
-          <Route path='/MyAutomaticPayments' element={<MyAutomaticPayments />} />
-          <Route path='/MyPlanInvoices' element={<MyPlanInvoices />} />
-          <Route path='/Wallet' element={<Wallet />} />
-          <Route path='/MyAccountInvoices' element={<MyAccountInvoices />} />
-        </Routes>
+        <Sidebar>
+          <Routes>
+            <Route path='/preferences' element={<Preferences />} />
+            <Route path='/' element={<Preferences />} />
+            <Route path='/MyAutomaticPayments' element={<MyAutomaticPayments />} />
+            <Route path='/MyPlanInvoices' element={<MyPlanInvoices />} />
+            <Route path='/Wallet' element={<Wallet />} />
+            <Route path='/MyAccountInvoices' element={<MyAccountInvoices />} />
+          </Routes>
+        </Sidebar>
       </Router>
       
     </div>
