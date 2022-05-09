@@ -30,14 +30,14 @@ const styles = {
           </Drawer.Actions>
         </Drawer.Header>
         <Drawer.Body>
-          <h4><AdminIcon className='icon'/>Your Profile</h4>
+          <h4><AdminIcon className='d_icon'/>Your Profile</h4>
           <hr/>
           <div className='profile'>
-            <h5><MemberIcon className='icon'/>Name:<br/><span className='detail'>{formData.name}</span></h5><br/>
-            <h5><EmailFillIcon className='icon' />UserID:<br/><span className='detail'>{formData.userID}</span></h5><br/>
-            <h5><GlobalIcon className='icon' />Language Preferred:<br/><span className='detail'>{formData.language}</span></h5><br/>
-            <h5><MobileIcon className='icon' />Mobile Number:<br/><span className='detail'>{formData.mobileNo}</span></h5><br/>
-            <h5><PhoneFillIcon className='icon'/>Days prior to invoice:<br/><span className='detail'>{formData.days}</span></h5><br/>
+            <h5><MemberIcon className='d_icon'/>Name:<br/><span className='detail'>{formData.name}</span></h5><br/>
+            <h5><EmailFillIcon className='d_icon' />UserID:<br/><span className='detail'>{formData.userID}</span></h5><br/>
+            <h5><GlobalIcon className='d_icon' />Language Preferred:<br/><span className='detail'>{formData.language}</span></h5><br/>
+            <h5><MobileIcon className='d_icon' />Mobile Number:<br/><span className='detail'>{formData.mobileNo}</span></h5><br/>
+            <h5><PhoneFillIcon className='d_icon'/>Days prior to invoice:<br/><span className='detail'>{formData.days}</span></h5><br/>
             <hr/>
           </div>
         </Drawer.Body>
