@@ -93,3 +93,17 @@
     gap:10px;
     padding: 5px 10px;
 }
+
+.link_text{
+    text-decoration: none;
+}
+
+.icon{
+    color: white;
+}
+
+.link:hover{
+    border-right: 4px solid white;
+    transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    background: rgb(45, 51, 89);
+}

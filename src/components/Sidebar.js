@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {motion} from 'framer-motion'
 import {FaHome,FaUser,FaBars} from 'react-icons/fa'
 import {MdMessage} from 'react-icons/md'
@@ -30,14 +30,17 @@ const routes = [
 ]
 
 const Sidebar = ({children}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
   return (
     <div className='main-container' >
-        <motion.div animate={{width:"200px"}} className='sidebar' >
+        <motion.div animate={{width: isOpen ? "200px" : "45px"}} className='sidebar' >
 
           <div className='top_section'>
-            <h1 className='logo'>UPS Payments</h1>
+            {isOpen && <h1 className='logo'>UPS Payments</h1>}
             <div className='bars'>
-              <FaBars />
+              <FaBars onClick={toggle}/>
             </div>
           </div>
 
