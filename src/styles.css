@@ -58,3 +58,9 @@
     height: 100vh;
     color: white;;
 }
+
+.top-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
