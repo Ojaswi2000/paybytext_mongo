@@ -52,3 +52,9 @@
     color: darkcyan;
     border-left: 2px solid darkcyan;
 }
+
+.sidebar{
+    background: rgb(2, 2, 91);
+    height: 100vh;
+    color: white;;
+}
