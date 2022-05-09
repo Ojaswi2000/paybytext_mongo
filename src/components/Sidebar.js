@@ -14,12 +14,12 @@ const routes = [
   },
   {
     path: "/MyAutomaticPayments",
-    name: "MyAutomaticPayments",
+    name: "My Automatic Payments",
     icon: <FaUser />,
   },
   {
     path: "/MyPlanInvoices",
-    name: "MyPlanInvoices",
+    name: "My Plan Invoices",
     icon: <MdMessage />,
   },
   {
@@ -35,7 +35,7 @@ const Sidebar = ({children}) => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div className='main-container' >
-        <motion.div animate={{width: isOpen ? "250px" : "45px"}} className='sidebar' >
+        <motion.div animate={{width: isOpen ? "250px" : "35px"}} className='sidebar' >
 
           <div className='top_section'>
             {isOpen && <h1 className='logo'>UPS Payments</h1>}
