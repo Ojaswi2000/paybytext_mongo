@@ -20,9 +20,8 @@ const Sidebar = ({children}) => {
           <section className='routes' >
             {routes.map((route) => {
               return <NavLink to={route.path} key={route.name}>
-                    <div className='icon'>
-                      {route.icon}
-                    </div>
+                    <div className='icon'>{route.icon}</div>
+                    <div className='link_text'>{route.name}</div>
                 </NavLink>
             })}
           </section>
