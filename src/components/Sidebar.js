@@ -35,7 +35,7 @@ const Sidebar = ({children}) => {
         <motion.div animate={{width:"200px"}} className='sidebar' >
 
           <div className='top_section'>
-            <h1 className='logo'>UPS</h1>
+            <h1 className='logo'>UPS Payments</h1>
             <div className='bars'>
               <FaBars />
             </div>

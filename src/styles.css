@@ -59,8 +59,28 @@
     color: white;;
 }
 
-.top-section{
+.top_section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+     padding: 15px 10px;
+}
+.logo{
+    font-size: 18px;
+    line-height: 0;
+}
+
+.search{
+    display:flex;
+    height: 30px;
+    padding: 10px;
+    align-items: center;
+    margin: 10px 0;
+
+}
+.search input{
+    border: none;
+    width: 160px;
+    margin-left: 10px;
+    border-radius: 5px;
 }
