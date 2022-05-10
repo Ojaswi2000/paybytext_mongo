@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {FaAngleDown} from 'react-icons/fa'
 import {NavLink} from 'react-router-dom'
 import '../styles.css'
 
 const SidebarMenu = ({route}) => {
+
+const [isOpen, setIsOpen] = useState(false);
+const toggle = () => setIsOpen(!isOpen);
+
   return (
       <div>
     <div className='menu'>
@@ -12,10 +16,11 @@ const SidebarMenu = ({route}) => {
             <div className='link_text'>{route.name}</div>
         </div>
         <div>
-            <FaAngleDown />
+            <FaAngleDown onClick={toggle} />
         </div>
     </div>
         
+        {isOpen &&
         <div className='menu_container'>
         {
             route.subRoutes.map((subRoute, index) => {
@@ -26,6 +31,7 @@ const SidebarMenu = ({route}) => {
             })
         }
         </div>
+        }
         </div>
     
   )
