@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {motion} from 'framer-motion'
-import {FaHome,FaUser,FaBars,FaUsers,FaAmazonPay} from 'react-icons/fa'
+import {FaHome,FaUser,FaBars,FaUsers,FaAmazonPay, FaAngleDown} from 'react-icons/fa'
 import {MdMessage, MdAdminPanelSettings} from 'react-icons/md'
 import {BiAnalyse,BiSearch} from 'react-icons/bi'
 import {SiPlanet} from 'react-icons/si'
@@ -82,6 +82,20 @@ const Sidebar = ({children}) => {
 
           <section className='routes' >
             {routes.map((route) => {
+
+              if(route.subRoutes){                  // for subroutes
+                return <div className='menu'>
+                    <div className='menu_item'>
+                    <div className='icon'>{route.icon}</div>
+                    <div className='link_text'>{route.name}</div>
+                    </div>
+
+                    <div>
+                      <FaAngleDown />
+                    </div>
+                </div>
+              }
+
               return <NavLink to={route.path} key={route.name} className='link'>
                     <div className='icon'>{route.icon}</div>
                     <div className='link_text'>{route.name}</div>
