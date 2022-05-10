@@ -21,7 +21,7 @@ const App = () => {
             <Route path='/MyPlanInvoices' element={<MyPlanInvoices />} />
             <Route path='/Wallet' element={<Wallet />} />
             <Route path='/MyAccountInvoices' element={<MyAccountInvoices />} />
-            <Route path='/PayByText' element={<Paybytext />} />
+            <Route path='/Administration/paybytext' element={<Paybytext />} />
           </Routes>
         </Sidebar>
       </Router>
