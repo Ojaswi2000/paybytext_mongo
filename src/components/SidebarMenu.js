@@ -16,7 +16,9 @@ const toggle = () => setIsOpen(!isOpen);
             <div className='link_text'>{route.name}</div>
         </div>
         <div>
-            {isOpen ? <FaAngleDown onClick={toggle} /> : <FaAngleRight onClick={toggle}/>}
+            {isOpen ? 
+            <FaAngleDown className='icon' onClick={toggle} /> : 
+            <FaAngleRight className='icon' onClick={toggle}/>}
         </div>
     </div>
         

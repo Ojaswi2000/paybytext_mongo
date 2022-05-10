@@ -65,19 +65,19 @@ const Sidebar = ({children}) => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div className='main-container' >
-        <motion.div animate={{width: isOpen ? "250px" : "35px"}} className='sidebar' >
+        <motion.div animate={{width: isOpen ? "300px" : "50px"}} className='sidebar' >
 
           <div className='top_section'>
             {isOpen && <h1 className='logo'>UPS Payments</h1>}
             <div className='bars'>
-              <FaBars onClick={toggle}/>
+              <FaBars onClick={toggle} className='icon'/>
             </div>
           </div>
 
 
           <div className='search'>
             <div className='search_icon'>
-              <BiSearch />
+              <BiSearch className='icon' />
             </div>
             {isOpen && <input placeholder='Search...' />}
           </div>
@@ -86,7 +86,8 @@ const Sidebar = ({children}) => {
             {routes.map((route) => {
 
               if(route.subRoutes){                  // for subroutes
-                return <SidebarMenu route={route} key={route.name}/>
+                return <SidebarMenu route={route} key={route.name} isOpen={isOpen}
+                  setIsOpen={setIsOpen} toggle={toggle} />
               }
 
               return <NavLink to={route.path} key={route.name} className='link'>
