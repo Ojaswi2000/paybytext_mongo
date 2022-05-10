@@ -1,10 +1,19 @@
 import React,{useState} from 'react'
 import {Button, ButtonToolbar,Modal} from 'rsuite'
+import { useNavigate } from "react-router-dom";
+
 
 const SubmitModal = ({formData}) => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const navigate = useNavigate();            //send formData to Paybytext route
+
+    const goToPaybytext = () => {
+      navigate("/Administration/paybytext", {state:{name:formData.name}});
+    }
+
   return (
   <div>
     <ButtonToolbar style={{display:"flex"}}>
@@ -25,7 +34,8 @@ const SubmitModal = ({formData}) => {
           UserID :<span style={{fontWeight:"bold"}}>{formData.userID}</span> <br/>
           Language :<span style={{fontWeight:"bold"}}>{formData.language}</span> <br/>
           Mobile Number :<span style={{fontWeight:"bold"}}>{formData.mobileNo}</span> <br/>
-          You have {formData.days} prior to your invoice date.
+          You have {formData.days} prior to your invoice date.<hr/>
+          Please <a onClick={goToPaybytext} href='/Administration/paybytext'>Click here</a> to be redirected to create Pay By Text.
           </p>:
 
           <p>Please enter your your relevant information</p>
