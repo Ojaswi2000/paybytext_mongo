@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {FaAngleDown} from 'react-icons/fa'
+import {FaAngleDown,FaAngleRight} from 'react-icons/fa'
 import {NavLink} from 'react-router-dom'
 import '../styles.css'
 
@@ -16,7 +16,7 @@ const toggle = () => setIsOpen(!isOpen);
             <div className='link_text'>{route.name}</div>
         </div>
         <div>
-            <FaAngleDown onClick={toggle} />
+            {isOpen ? <FaAngleDown onClick={toggle} /> : <FaAngleRight onClick={toggle}/>}
         </div>
     </div>
         
