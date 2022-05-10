@@ -5,6 +5,7 @@ import '../styles.css'
 
 const SidebarMenu = ({route}) => {
   return (
+      <div>
     <div className='menu'>
         <div className='menu_item'>
             <div className='icon'>{route.icon}</div>
@@ -13,6 +14,9 @@ const SidebarMenu = ({route}) => {
         <div>
             <FaAngleDown />
         </div>
+    </div>
+        
+        <div className='menu_container'>
         {
             route.subRoutes.map((subRoute, index) => {
                 return <NavLink to={subRoute.path} key={index} className='link'>
@@ -21,7 +25,9 @@ const SidebarMenu = ({route}) => {
             </NavLink>
             })
         }
-    </div>
+        </div>
+        </div>
+    
   )
 }
 

@@ -120,9 +120,16 @@
     gap:10px;
     padding: 5px 10px;
     justify-content: space-between;
+    direction: column;
+    border-right: 4px solid cubic-bezier(0.6, -0.28, 0.735, 0.045);;
 }
 
 .menu_item{
     display: flex;
     gap:10px;
+}
+.menu_container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
 }
