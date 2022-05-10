@@ -96,10 +96,12 @@
 
 .link_text{
     text-decoration: none;
+    font-size: 20px;
 }
 
 .icon{
     color: white;
+    font-size: 30px;
 }
 
 .link:hover{
