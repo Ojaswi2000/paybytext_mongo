@@ -148,7 +148,10 @@ main{
 
 .user{
     display: flex;
-}
-.pay_container{
     justify-content: space-between;
+}
+
+
+.head h3{
+    margin-right: 500px;
 }

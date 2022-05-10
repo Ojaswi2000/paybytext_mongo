@@ -15,6 +15,13 @@ const Paybytext = () => {
           <h6>Name</h6>
         </div>
       </div>
+      <hr/>
+      
+      <div>
+        <h5>Dashboard {">"} Pay By Text</h5>
+      </div>
+      <br/>
+      <h3 style={{borderBottom:"4px solid cyan"}} >Pay By Text</h3>
     </div>
   )
 }
