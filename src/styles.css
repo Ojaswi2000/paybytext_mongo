@@ -119,4 +119,10 @@
     color:white;
     gap:10px;
     padding: 5px 10px;
+    justify-content: space-between;
+}
+
+.menu_item{
+    display: flex;
+    gap:10px;
 }
