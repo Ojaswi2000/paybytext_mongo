@@ -1,8 +1,9 @@
 import React,{useState} from 'react'
 import {motion} from 'framer-motion'
-import {FaHome,FaUser,FaBars} from 'react-icons/fa'
-import {MdMessage} from 'react-icons/md'
+import {FaHome,FaUser,FaBars,FaUsers,FaAmazonPay} from 'react-icons/fa'
+import {MdMessage, MdAdminPanelSettings} from 'react-icons/md'
 import {BiAnalyse,BiSearch} from 'react-icons/bi'
+import {SiPlanet} from 'react-icons/si'
 import '../styles.css';
 import { NavLink } from 'react-router-dom';
 
@@ -26,6 +27,33 @@ const routes = [
     path: "/Wallet",
     name: "Wallet",
     icon: <BiAnalyse />,
+  },
+  {
+    path: "/Administration",
+    name: "Administration",
+    icon: <MdAdminPanelSettings />,
+    subRoutes:[
+    {
+      path: "/Administration/my_accounts",
+      name: "My Accounts",
+      icon: <MdAdminPanelSettings />,
+    },
+    {
+      path: "/Administration/myplans",
+      name: "My Plans",
+      icon: <SiPlanet />,
+    },
+    {
+      path: "/Administration/manage_users",
+      name: "Manage Users",
+      icon: <FaUsers />,
+    },
+    {
+      path: "/Administration/paybytext",
+      name: "Pay By Text",
+      icon: <FaAmazonPay />,
+    }
+  ]
   },
 ]
 
