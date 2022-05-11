@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react'
 import {FaUser} from 'react-icons/fa'
+//import {BiSearch} from 'react-icons/bi'
 import {useLocation} from 'react-router-dom'
+import {Button} from 'rsuite'
 import './styles.css';
 
 const Paybytext = () => {
@@ -42,7 +44,12 @@ useEffect(()=>{
         <h5>Dashboard {">"} Pay By Text</h5>
       </div>
       <br/>
-      <h3 style={{borderBottom:"4px solid cyan"}} >Pay By Text</h3>
+      <h3 style={{borderBottom:"4px solid cyan",marginBottom: "50px"}} >Pay By Text</h3>
+
+      <div className='create'>
+        <input />
+        <Button color='green' appearance='primary'>Create Pay By Text</Button>
+      </div>
 
       <table>
         <tr>
