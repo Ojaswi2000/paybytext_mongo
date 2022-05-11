@@ -1,6 +1,7 @@
 import React from 'react'
 import {Modal} from 'rsuite'
 import '../../styles.css'
+import Card from '../Card'
 
 const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData}) => {
   return (
@@ -14,7 +15,11 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData})
             <i style={{marginBottom:"10px"}}>*Indicates required field</i>
             <h6 style={{marginBottom:"10px"}}>Select an account to create Pay By Text</h6>
             <div className='card_container'>
-
+                {
+                    accountData.map((account) => {
+                        return <Card key={account._id} account={account} />
+                    })
+                }
             </div>
         </Modal.Body>
     </Modal>

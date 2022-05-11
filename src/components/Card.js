@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({account}) => {
   return (
     <div>
-        
+        <p>{account.accountName}</p>
+        <p>{account.accountNumber}</p>
     </div>
   )
 }

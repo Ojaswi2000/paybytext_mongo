@@ -24,7 +24,7 @@ const fetchItems = async() => {
   }
   
 }
-console.log(accountData);
+//console.log(accountData);
 
 useEffect(()=>{
   fetchItems();
