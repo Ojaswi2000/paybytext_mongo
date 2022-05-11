@@ -51,13 +51,18 @@ useEffect(()=>{
           <th>Account Name</th>
           <th>Payment Method</th>
         </tr>
-        
-        <tr>
+        {accountData.map((account,index) => {
+          return(
+          <tr>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
         </tr>
+          )
+        })}
+
+        
       </table>
 
     </div>
