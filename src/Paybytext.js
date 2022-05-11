@@ -3,6 +3,7 @@ import {FaUser} from 'react-icons/fa'
 //import {BiSearch} from 'react-icons/bi'
 import {useLocation} from 'react-router-dom'
 import {Button} from 'rsuite'
+import AccountSelection from './components/payments/AccountSelection';
 import './styles.css';
 
 const Paybytext = () => {
@@ -76,7 +77,7 @@ useEffect(()=>{
 
         
       </table>
-
+        {isOpen && <AccountSelection />}
     </div>
   )
 }
