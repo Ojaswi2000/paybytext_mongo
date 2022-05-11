@@ -1,10 +1,20 @@
-import React from 'react'
+import React,{useState, useEffect, useDebugValue} from 'react'
 import {FaUser} from 'react-icons/fa'
 import {useLocation} from 'react-router-dom'
 import './styles.css';
 
 const Paybytext = () => {
-  const location = useLocation();
+const location = useLocation();
+
+const fetchItems = async() => {
+  const data = await fetch('http://localhost:5000/api/v1/all-users');
+  const response = await data.json();
+  console.log(response);
+}
+
+useEffect(()=>{
+  fetchItems();
+},[])
 
   return (
     <div className='pay_container'>
@@ -31,6 +41,12 @@ const Paybytext = () => {
           <th>Payment Method</th>
         </tr>
         
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
       </table>
 
     </div>

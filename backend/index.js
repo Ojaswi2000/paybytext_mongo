@@ -31,6 +31,7 @@ app.get('/',(req,res,next)=>{
 })
 // 1. Handler for displaying all users- handleGetAllUsers
 const handleGetAllUsers = (req,res,next) => {
+    res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
     try {
         User.find().sort({_id:-1})
             .then(result => {
@@ -215,4 +216,4 @@ app.delete('/api/v1/paybytext/:id', handleDeletePayByTextById)
 // the put request for updation of a user account
 app.put('/api/v1/paybytext/:id', handleUpdatePayByText)
 
-app.listen(3000);
+app.listen(5000);
