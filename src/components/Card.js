@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styles.css'
 
 const Card = ({account}) => {
   return (
-    <div>
+    <div className='card'>
         <p>{account.accountName}</p>
         <p>{account.accountNumber}</p>
     </div>
