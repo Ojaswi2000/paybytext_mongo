@@ -175,3 +175,15 @@ table {
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
+.card_container{
+    display: inline-block;
+    width: 25%;
+    padding: 5px;
+}
+
+.card{
+    display: inline-block;
+    border: 2px solid black;
+    padding: 5px;
+}
