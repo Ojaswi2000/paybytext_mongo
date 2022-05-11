@@ -51,13 +51,13 @@ useEffect(()=>{
           <th>Account Name</th>
           <th>Payment Method</th>
         </tr>
-        {accountData.map((account,index) => {
+        {accountData.map((account) => {
           return(
-          <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <tr key={account._id}>
+          <td>{account._id}</td>
+          <td>{account.accountNumber}</td>
+          <td>{account.accountName}</td>
+          <td>{account.paymentType}</td>
         </tr>
           )
         })}
