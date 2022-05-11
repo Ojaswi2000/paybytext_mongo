@@ -17,7 +17,7 @@ const fetchItems = async() => {
         
       })
   } catch (error) {
-    
+    console.log(error);
   }
   
 }
