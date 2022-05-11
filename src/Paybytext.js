@@ -1,4 +1,4 @@
-import React,{useState, useEffect, useDebugValue} from 'react'
+import React,{useState, useEffect} from 'react'
 import {FaUser} from 'react-icons/fa'
 import {useLocation} from 'react-router-dom'
 import './styles.css';
@@ -6,11 +6,22 @@ import './styles.css';
 const Paybytext = () => {
 const location = useLocation();
 
+const [accountData, setAccountData] = useState([]);
+
 const fetchItems = async() => {
-  const data = await fetch('http://localhost:5000/api/v1/all-users');
-  const response = await data.json();
-  console.log(response);
+  try {
+      await fetch('http://localhost:5000/api/v1/all-users')
+      .then( response => response.json())
+      .then((data) => {
+        setAccountData(data.messageBody);
+        
+      })
+  } catch (error) {
+    
+  }
+  
 }
+console.log(accountData);
 
 useEffect(()=>{
   fetchItems();
