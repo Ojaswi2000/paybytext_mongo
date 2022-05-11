@@ -32,7 +32,8 @@ useEffect(()=>{
 
   // payment modal
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => (!isOpen);
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
 
   return (
     <div className='pay_container'>
@@ -51,9 +52,13 @@ useEffect(()=>{
       <br/>
       <h3 style={{borderBottom:"4px solid cyan",marginBottom: "50px"}} >Pay By Text</h3>
 
+      {isOpen && <AccountSelection isOpen={isOpen} setIsOpen={setIsOpen}
+          handleClose={handleClose} handleOpen={handleOpen} />}
+
+          
       <div className='create'>
         <input />
-        <Button color='green' appearance='primary' onClick={toggle}>
+        <Button color='green' appearance='primary' onClick={handleOpen}>
         Create Pay By Text</Button>
       </div>
 
@@ -77,7 +82,7 @@ useEffect(()=>{
 
         
       </table>
-        {isOpen && <AccountSelection />}
+        
     </div>
   )
 }
