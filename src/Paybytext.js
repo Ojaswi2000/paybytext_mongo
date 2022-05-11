@@ -29,6 +29,10 @@ useEffect(()=>{
   fetchItems();
 },[])
 
+  // payment modal
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => (!isOpen);
+
   return (
     <div className='pay_container'>
       <div className='head'>
@@ -48,7 +52,8 @@ useEffect(()=>{
 
       <div className='create'>
         <input />
-        <Button color='green' appearance='primary'>Create Pay By Text</Button>
+        <Button color='green' appearance='primary' onClick={toggle}>
+        Create Pay By Text</Button>
       </div>
 
       <table>
