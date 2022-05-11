@@ -53,9 +53,9 @@ useEffect(()=>{
       <h3 style={{borderBottom:"4px solid cyan",marginBottom: "50px"}} >Pay By Text</h3>
 
       {isOpen && <AccountSelection isOpen={isOpen} setIsOpen={setIsOpen}
-          handleClose={handleClose} handleOpen={handleOpen} />}
+          handleClose={handleClose} handleOpen={handleOpen} accountData={accountData}/>}
 
-          
+
       <div className='create'>
         <input />
         <Button color='green' appearance='primary' onClick={handleOpen}>

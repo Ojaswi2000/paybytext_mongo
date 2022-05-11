@@ -1,15 +1,18 @@
 import React from 'react'
 import {Modal} from 'rsuite'
 
-const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen}) => {
+const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData}) => {
   return (
     <Modal open={isOpen} onClose={handleClose}>
         <Modal.Header>
-            <Modal.Title>Create Pay By Text</Modal.Title>
+            <Modal.Title style={{fontSize:"30px"}}>Create Pay By Text</Modal.Title><hr/>
         </Modal.Header>
 
         <Modal.Body>
-            Account Selection
+            <h4 style={{marginBottom:"10px"}}>Account Selection</h4>
+            <i style={{marginBottom:"10px"}}>*Indicates required field</i>
+            <h6 style={{marginBottom:"10px"}}>Select an account to create Pay By Text</h6>
+
         </Modal.Body>
     </Modal>
   )
