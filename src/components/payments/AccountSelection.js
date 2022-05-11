@@ -17,7 +17,7 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData})
             <div className='card_container'>
                 {
                     accountData.map((account) => {
-                        return <Card key={account._id} account={account} />
+                        return <Card className='card' key={account._id} account={account} />
                     })
                 }
             </div>
