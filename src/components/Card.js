@@ -5,8 +5,10 @@ import {Panel} from 'rsuite'
 const Card = ({account}) => {
   return (
     <Panel className='card' shaded>
-        <p style={{marginBottom:"2px"}}>{account.accountName}</p>
-        <p>{account.accountNumber}</p>
+      <div>
+          <p style={{marginBottom:"2px",fontWeight:"bold"}}>{account.accountName}</p>
+          <p>{account.accountNumber}</p>
+      </div>
     </Panel>
   )
 }
