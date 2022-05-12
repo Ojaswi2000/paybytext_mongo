@@ -1,11 +1,13 @@
 import React from 'react'
-import {Modal} from 'rsuite'
+import {Modal,Button} from 'rsuite'
+import {BsFillInfoCircleFill} from 'react-icons/bs'
 import '../../styles.css'
 import Card from '../Card'
 
-const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData}) => {
+const AccountSelection = ({isOpen,handleClose,accountData}) => {
+    
   return (
-    <Modal open={isOpen} onClose={handleClose} overflow={true}>
+    <Modal open={isOpen} onClose={handleClose} overflow={false} style={{textAlign:"center"}}>
         <Modal.Header>
             <Modal.Title style={{fontSize:"30px"}}>Create Pay By Text</Modal.Title><hr/>
         </Modal.Header>
@@ -20,6 +22,21 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData})
                         return <Card key={account._id} account={account} />
                     })
                 }
+            </div>
+            <hr/>
+            <div>
+            <p style=
+            {{border:"2px solid orange",
+            borderRadius:"5px",
+            width:"100%",
+            textAlign:"center",
+            marginRight: "50%"
+            }}>
+                <BsFillInfoCircleFill style={{margin:"0 5px",fontSize:"23px",color:"orange"}} />Pay by Text does not support plans. If an account with an existing pay by text is enrolled into a plan, it will be canceled</p>
+            </div>
+            <br/>
+            <div>
+                <Button appearance='primary' color='cyan'>Next</Button>
             </div>
         </Modal.Body>
     </Modal>
