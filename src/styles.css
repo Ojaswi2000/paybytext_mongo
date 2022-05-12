@@ -180,7 +180,7 @@ table {
     display: inline-block;
     width: 100%;
     padding: 10px;
-    
+    background-color: gray;
 }
 
 .card{
@@ -189,4 +189,5 @@ table {
     margin: 0 5px;
     width: 120px;
     height: 100px;
+    background-color: white;
 }

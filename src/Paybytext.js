@@ -72,10 +72,10 @@ useEffect(()=>{
         {accountData.map((account) => {
           return(
           <tr key={account._id}>
-          <td>{account._id}</td>
-          <td>{account.accountNumber}</td>
-          <td>{account.accountName}</td>
-          <td>{account.paymentType}</td>
+            <td>{account._id}</td>
+            <td>{account.accountNumber}</td>
+            <td>{account.accountName}</td>
+            <td>{account.paymentType}</td>
         </tr>
           )
         })}
