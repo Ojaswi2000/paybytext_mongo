@@ -6,7 +6,7 @@ const Card = ({account}) => {
   return (
     <Panel className='card' shaded>
       <div>
-        <input type="radio" />
+        <input style={{margin:"0",padding:"1.5px"}} type="radio" />
       </div>
       <div>
           <p style={{marginBottom:"2px",fontWeight:"bold"}}>{account.accountName}</p>

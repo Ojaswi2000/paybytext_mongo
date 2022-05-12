@@ -185,9 +185,9 @@ table {
 
 .card{
     display: inline-block;
-    padding: 5px;
+    padding: 0px;
     margin: 0 5px;
-    width: 120px;
+    width: 170px;
     height: 100px;
     background-color: white;
 }
