@@ -76,7 +76,7 @@ useEffect(()=>{
             <td>{account.accountNumber}</td>
             <td>{account.accountName}</td>
             <td>{account.paymentType}</td>
-        </tr>
+          </tr>
           )
         })}
 
