@@ -6,6 +6,11 @@ const Card = ({account}) => {
   const [check,setCheck] = useState(false);
   const [acc, setAcc] = useState(null);
 
+  const onChanged = () => {
+    setAcc(account);
+    setCheck(!check);
+  }
+
   console.log(acc);
   return (
     <Panel className='card' shaded>
@@ -15,7 +20,7 @@ const Card = ({account}) => {
           name='account'
           value={account}
           checked={acc === account}
-          onChange={() => setAcc(account)}
+          onChange={onChanged}
         />
       </div>
       <div>
