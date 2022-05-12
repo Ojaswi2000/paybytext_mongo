@@ -1,12 +1,13 @@
 import React from 'react'
 import '../styles.css'
+import {Panel} from 'rsuite'
 
 const Card = ({account}) => {
   return (
-    <div className='card'>
+    <Panel className='card' shaded>
         <p>{account.accountName}</p>
         <p>{account.accountNumber}</p>
-    </div>
+    </Panel>
   )
 }
 
