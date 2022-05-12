@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Modal,Button} from 'rsuite'
 import {BsFillInfoCircleFill} from 'react-icons/bs'
 import '../../styles.css'
 import Card from '../Card'
+import PaymentSelection from './PaymentSelection'
 
-const AccountSelection = ({isOpen,handleClose,accountData}) => {
+const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData}) => {
+    const [open, setOpen] =useState(false);
+    const onHandleOpen = () => setOpen(true);
+    const onHandleClose = () => setOpen(false);
+
+    const [step, setStep] = useState(1);
+
+    const nextStep = () => {
+        setStep(step+1);
+    }
+    const prevStep = () => {
+        setStep(step-1);
+    } 
+    if(step === 1){
+        <AccountSelection step={step} setStep={setStep}/>
+    }
+    if(step === 2){
+        <PaymentSelection step={step} setStep={setStep}/>
+    }
     
   return (
+
     <Modal open={isOpen} onClose={handleClose} overflow={false} style={{textAlign:"center"}}>
         <Modal.Header>
             <Modal.Title style={{fontSize:"30px"}}>Create Pay By Text</Modal.Title><hr/>
@@ -36,8 +56,10 @@ const AccountSelection = ({isOpen,handleClose,accountData}) => {
             </div>
             <br/>
             <div>
-                <Button appearance='primary' color='cyan'>Next</Button>
+                <Button appearance='primary' color='cyan' onClick={nextStep}>Next</Button>
             </div>
+            {open && <PaymentSelection />}
+
         </Modal.Body>
     </Modal>
   )
