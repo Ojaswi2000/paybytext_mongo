@@ -5,7 +5,7 @@ import Card from '../Card'
 
 const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData}) => {
   return (
-    <Modal open={isOpen} onClose={handleClose}>
+    <Modal open={isOpen} onClose={handleClose} overflow={true}>
         <Modal.Header>
             <Modal.Title style={{fontSize:"30px"}}>Create Pay By Text</Modal.Title><hr/>
         </Modal.Header>

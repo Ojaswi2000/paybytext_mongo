@@ -178,8 +178,9 @@ table {
 
 .card_container{
     display: flex;
-    width: 50%;
+    width: 100%;
     padding: 20px;
+    
 }
 
 .card{
