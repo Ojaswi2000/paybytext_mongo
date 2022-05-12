@@ -177,9 +177,9 @@ table {
 }
 
 .card_container{
-    display: flex;
+    display: inline-block;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     
 }
 
@@ -187,4 +187,6 @@ table {
     display: inline-block;
     padding: 5px;
     margin: 0 5px;
+    width: 120px;
+    height: 100px;
 }
