@@ -4,9 +4,30 @@ import {FaUser} from 'react-icons/fa'
 import {useLocation} from 'react-router-dom'
 import {Button} from 'rsuite'
 import AccountSelection from './components/payments/AccountSelection';
+import PaymentSelection from './components/payments/PaymentSelection';
 import './styles.css';
 
 const Paybytext = () => {
+
+
+  const [step, setStep] = useState(0);
+
+  const nextStep = () => {
+      setStep(step+1);
+  }
+  const prevStep = () => {
+      setStep(step-1);
+  } 
+  if(step === 1){
+      <AccountSelection step={step} setStep={setStep}/>
+  }
+  if(step === 2){
+      <PaymentSelection step={step} setStep={setStep}/>
+  }
+
+
+
+
 const location = useLocation();
 
 const [accountData, setAccountData] = useState([]);
@@ -32,7 +53,10 @@ useEffect(()=>{
 
   // payment modal
   const [isOpen, setIsOpen] = useState(false);
-  const handleOpen = () => setIsOpen(true);
+  const handleOpen = () => {
+    setIsOpen(true);
+    nextStep();
+  }
   const handleClose = () => setIsOpen(false);
 
   return (
@@ -53,7 +77,9 @@ useEffect(()=>{
       <h3 style={{borderBottom:"4px solid cyan",marginBottom: "50px"}} >Pay By Text</h3>
 
       {isOpen && <AccountSelection isOpen={isOpen} setIsOpen={setIsOpen}
-          handleClose={handleClose} handleOpen={handleOpen} accountData={accountData}/>}
+          handleClose={handleClose} handleOpen={handleOpen} accountData={accountData}
+          step={step} nextStep={nextStep}
+          />}
 
 
       <div className='create'>

@@ -1,17 +1,9 @@
-import React,{useState} from 'react'
+import React from 'react'
 import '../styles.css'
 import {Panel} from 'rsuite'
 
-const Card = ({account}) => {
-  const [check,setCheck] = useState(false);
-  const [acc, setAcc] = useState(null);
+const Card = ({account,id,selectedCardId,handleCardClick}) => {
 
-  const onChanged = () => {
-    setAcc(account);
-    setCheck(!check);
-  }
-
-  console.log(acc);
   return (
     <Panel className='card' shaded>
       <div>
@@ -19,8 +11,8 @@ const Card = ({account}) => {
           type="radio" 
           name='account'
           value={account}
-          checked={acc === account}
-          onChange={onChanged}
+          checked={id === selectedCardId}
+          onChange={() => handleCardClick(id)}
         />
       </div>
       <div>

@@ -29,12 +29,12 @@ const SubmitModal = ({formData}) => {
         {
           formData.name && formData.userID ?
           <p>Hello <span style={{fontWeight:"bold"}}>{formData.name}</span> !!
-          <hr/>We have saved your changes. Your saved changes are shown as follows:<br/>
+          We have saved your changes. Your saved changes are shown as follows:<br/>
           Name :<span style={{fontWeight:"bold"}}>{formData.name}</span> <br/>
           UserID :<span style={{fontWeight:"bold"}}>{formData.userID}</span> <br/>
           Language :<span style={{fontWeight:"bold"}}>{formData.language}</span> <br/>
           Mobile Number :<span style={{fontWeight:"bold"}}>{formData.mobileNo}</span> <br/>
-          You have {formData.days} prior to your invoice date.<hr/>
+          You have {formData.days} prior to your invoice date.
           Please <a onClick={goToPaybytext} href='/Administration/paybytext'>Click here</a> to be redirected to create Pay By Text.
           </p>:
 

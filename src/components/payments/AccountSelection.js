@@ -5,29 +5,24 @@ import '../../styles.css'
 import Card from '../Card'
 import PaymentSelection from './PaymentSelection'
 
-const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData}) => {
+const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,step,nextStep}) => {
     const [open, setOpen] =useState(false);
-    const onHandleOpen = () => setOpen(true);
+    const onHandleOpen = () => {
+        setOpen(true);
+        nextStep();
+    }
     const onHandleClose = () => setOpen(false);
 
-    const [step, setStep] = useState(1);
-
-    const nextStep = () => {
-        setStep(step+1);
-    }
-    const prevStep = () => {
-        setStep(step-1);
-    } 
-    if(step === 1){
-        <AccountSelection step={step} setStep={setStep}/>
-    }
-    if(step === 2){
-        <PaymentSelection step={step} setStep={setStep}/>
-    }
+    const [selectedCardId, setSelectedCardId] = useState(null);
     
+    const handleCardClick = (id) => {
+        setSelectedCardId(id);
+        console.log(id);
+    }
   return (
 
     <Modal open={isOpen} onClose={handleClose} overflow={false} style={{textAlign:"center"}}>
+        {open && <PaymentSelection />}
         <Modal.Header>
             <Modal.Title style={{fontSize:"30px"}}>Create Pay By Text</Modal.Title><hr/>
         </Modal.Header>
@@ -39,7 +34,13 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData})
             <div className='card_container'>
                 {
                     accountData.map((account) => {
-                        return <Card key={account._id} account={account} />
+                        return <Card 
+                        key={account._id} 
+                        account={account} 
+                        id={account._id}
+                        selectedCardId= {selectedCardId}
+                        handleCardClick={handleCardClick}
+                        />
                     })
                 }
             </div>
@@ -56,9 +57,8 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData})
             </div>
             <br/>
             <div>
-                <Button appearance='primary' color='cyan' onClick={nextStep}>Next</Button>
+                <Button appearance='primary' color='cyan' onClick={onHandleOpen}>Next</Button>
             </div>
-            {open && <PaymentSelection />}
 
         </Modal.Body>
     </Modal>
