@@ -22,11 +22,11 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,s
   return (
 
     <Modal open={isOpen} onClose={handleClose} overflow={false} style={{textAlign:"center"}}>
-        {open && <PaymentSelection />}
+        
         <Modal.Header>
             <Modal.Title style={{fontSize:"30px"}}>Create Pay By Text</Modal.Title><hr/>
         </Modal.Header>
-
+        {open && <PaymentSelection />}
         <Modal.Body>
             <h4 style={{marginBottom:"10px"}}>Account Selection</h4>
             <i style={{marginBottom:"10px"}}>*Indicates required field</i>
