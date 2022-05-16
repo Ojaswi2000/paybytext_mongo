@@ -11,8 +11,8 @@ const Card = ({account,id,selectedCardId,handleCardClick}) => {
           type="radio" 
           name='account'
           value={account}
-          checked={id === selectedCardId}
-          onChange={() => handleCardClick(id)}
+          checked={account === selectedCardId}
+          onChange={() => handleCardClick(account)}
         />
       </div>
       <div>

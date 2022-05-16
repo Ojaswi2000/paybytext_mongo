@@ -15,15 +15,15 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,s
 
     const [selectedCardId, setSelectedCardId] = useState(null);
     
-    const handleCardClick = (id) => {
-        setSelectedCardId(id);
-        console.log(id);
+    const handleCardClick = (account) => {
+        setSelectedCardId(account);
+        console.log(account.accountName);
     }
 
     
   return (
 
-    <Modal open={isOpen} onClose={handleClose} overflow={false} style={{textAlign:"center"}}>
+    <Modal open={isOpen} onClose={handleClose} overflow={true} style={{textAlign:"center"}}>
         
         <Modal.Header>
             <Modal.Title style={{fontSize:"30px"}}>Create Pay By Text</Modal.Title><hr/>
@@ -61,7 +61,7 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,s
             <div>
                 <Button appearance='primary' color='cyan' onClick={onHandleOpen}>Next</Button>
             </div>
-            {open && <div>Hello</div>}
+            {open && <div></div>}
         </Modal.Body>
     </Modal>
   )
