@@ -3,7 +3,8 @@ import {Modal} from 'rsuite'
 
 const PaymentSelection = ({step,setStep}) => {
   return (
-    <Modal>
+    <div>
+      <Modal>
         <Modal.Header>
             <Modal.Title>
                 Create Pay By Text
@@ -14,6 +15,8 @@ const PaymentSelection = ({step,setStep}) => {
             Payment Selection
         </Modal.Body>
     </Modal>
+    </div>
+    
   )
 }
 

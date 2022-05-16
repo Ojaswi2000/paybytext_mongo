@@ -55,7 +55,7 @@ useEffect(()=>{
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(true);
-    nextStep();
+    
   }
   const handleClose = () => setIsOpen(false);
 

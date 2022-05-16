@@ -9,7 +9,7 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,s
     const [open, setOpen] =useState(false);
     const onHandleOpen = () => {
         setOpen(true);
-        nextStep();
+        /* nextStep(); */
     }
     const onHandleClose = () => setOpen(false);
 
@@ -19,6 +19,8 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,s
         setSelectedCardId(id);
         console.log(id);
     }
+
+    
   return (
 
     <Modal open={isOpen} onClose={handleClose} overflow={false} style={{textAlign:"center"}}>
@@ -26,7 +28,7 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,s
         <Modal.Header>
             <Modal.Title style={{fontSize:"30px"}}>Create Pay By Text</Modal.Title><hr/>
         </Modal.Header>
-        {open && <PaymentSelection />}
+
         <Modal.Body>
             <h4 style={{marginBottom:"10px"}}>Account Selection</h4>
             <i style={{marginBottom:"10px"}}>*Indicates required field</i>
