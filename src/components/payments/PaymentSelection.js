@@ -2,7 +2,7 @@ import React from 'react'
 import {Modal} from 'rsuite'
 import '../../styles.css'
 
-const PaymentSelection = ({step,setStep}) => {
+const PaymentSelection = ({selectedCardId}) => {
   return (
     <div>
       <h3>Payment Method</h3>
@@ -14,7 +14,14 @@ const PaymentSelection = ({step,setStep}) => {
             <th>Bank Direct Deposit Only</th>
           </tr>
         </thead>
-      </table>
+        <tbody>
+          <tr>
+            <td>{selectedCardId.accountName}</td>
+            <td>{selectedCardId.accountNumber}</td>
+            <td>{selectedCardId.accountName}</td>
+          </tr>
+        </tbody>
+        </table>
     </div>
     
   )

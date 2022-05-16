@@ -17,9 +17,9 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,s
     
     const handleCardClick = (account) => {
         setSelectedCardId(account);
-        console.log(account.accountName);
+        // console.log(account.accountName);
     }
-
+    console.log(selectedCardId)
     
   return (
 
@@ -64,9 +64,9 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,s
 
 
             {selectedCardId  && open && 
-                <PaymentSelection />
+                <PaymentSelection selectedCardId={selectedCardId} />
             }
-                
+            
              
         </Modal.Body>
     </Modal>
