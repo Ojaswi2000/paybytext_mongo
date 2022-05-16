@@ -1,5 +1,4 @@
 import React from 'react'
-import {Modal} from 'rsuite'
 import '../../styles.css'
 
 const PaymentSelection = ({selectedCardId}) => {
