@@ -204,3 +204,7 @@ table {
 .tab td {
     text-align: center;
   }
+
+.payment2{
+    justify-content: space-between;
+}

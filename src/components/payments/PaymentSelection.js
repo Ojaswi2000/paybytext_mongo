@@ -1,10 +1,12 @@
 import React from 'react'
 import '../../styles.css'
+import {Button} from 'rsuite'
 
 const PaymentSelection = ({selectedCardId}) => {
   return (
     <div>
       <h3>Payment Method</h3>
+      <hr/>
       <table className='tab'>
         <thead>
           <tr>
@@ -26,6 +28,19 @@ const PaymentSelection = ({selectedCardId}) => {
           </tr>
         </tbody>
         </table>
+        <i>Indicates required field</i>
+
+        <div className='payment2'>
+          <div style={{float:"left"}}>
+            <p style={{color:"orange"}}>My Wallet*</p>
+            <select>
+              <option>{selectedCardId.paymentMethod.walletId}</option>
+            </select>
+          </div>
+          <div style={{float:"right"}}>
+            <Button appearance='primary' color='green'>Add Payment Method</Button>
+          </div>
+        </div>
     </div>
     
   )
