@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../styles.css'
-import {Button} from 'rsuite'
+import {Button,Alert} from 'rsuite'
 
 const PaymentSelection = ({selectedCardId}) => {
+  const [check, setCheck] = useState(false);
+  const handleCheck = () => setCheck(!check);
+
+  const [num, setNum] = useState(0);
+  const handleNum = () => {
+    setNum(1);
+  }
   return (
     <div>
       <h3>Payment Method</h3>
@@ -41,6 +48,21 @@ const PaymentSelection = ({selectedCardId}) => {
             <Button appearance='primary' color='green'>Add Payment Method</Button>
           </div>
         </div>
+        <br/><br/><br/><br/><br/>
+
+        <div>
+          <input 
+          type="checkbox"
+          onChange={handleCheck}
+          />
+          I authorize pay by text from the account that I have selected.This authorization is valid until I cancel it through the Billing Center or by calling my UPS customer service number.
+        </div>
+
+        <Button appearance='primary' color='cyan' onClick={handleNum}>Submit</Button>
+
+        {!check && num===1 && 
+        <p>Please select the authorization settings</p>
+        }
     </div>
     
   )
