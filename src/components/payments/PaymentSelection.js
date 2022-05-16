@@ -18,7 +18,12 @@ const PaymentSelection = ({selectedCardId}) => {
           <tr>
             <td>{selectedCardId.accountName}</td>
             <td>{selectedCardId.accountNumber}</td>
-            <td>{selectedCardId.accountName}</td>
+            <td>
+              <select placeholder='Y/N'>
+                <option>Yes</option>
+                <option>no</option>
+              </select>
+            </td>
           </tr>
         </tbody>
         </table>
