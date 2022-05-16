@@ -61,7 +61,7 @@ const AccountSelection = ({isOpen,setIsOpen,handleClose,handleOpen,accountData,s
             <div>
                 <Button appearance='primary' color='cyan' onClick={onHandleOpen}>Next</Button>
             </div>
-
+            {open && <div>Hello</div>}
         </Modal.Body>
     </Modal>
   )
