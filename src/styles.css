@@ -190,3 +190,17 @@ table {
     height: 100px;
     background-color: white;
 }
+
+.tab{
+    border: 2px solid forestgreen;
+    width: 540px;
+    height: 100px;
+}
+
+.tab th {
+    border-bottom: 1px solid black;
+  }
+    
+.tab td {
+    text-align: center;
+  }
