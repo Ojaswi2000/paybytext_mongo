@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../../styles.css'
-import {Button,Alert} from 'rsuite'
+import {Button} from 'rsuite'
 import Confirmation from './Confirmation';
 
 const PaymentSelection = ({selectedCardId}) => {
