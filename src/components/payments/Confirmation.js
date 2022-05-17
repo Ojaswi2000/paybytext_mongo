@@ -3,7 +3,7 @@ import React from 'react'
 const Confirmation = () => {
   return (
     <div>
-        HELLO
+        <h4>Hello</h4>
     </div>
   )
 }

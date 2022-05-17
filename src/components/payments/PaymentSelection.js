@@ -10,6 +10,8 @@ const PaymentSelection = ({selectedCardId}) => {
   const [num, setNum] = useState(0);
   const handleNum = () => {
     setNum(1);
+    if (num ===1 )
+    <Confirmation />
   }
   return (
     <div>
