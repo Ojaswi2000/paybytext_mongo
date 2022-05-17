@@ -22,7 +22,7 @@ const Confirmation = ({selectedCardId}) => {
             <div style={{borderBottom: "1px solid grey"}}>
                 <h6>Payment Method:</h6>
                 {
-                    selectedCardId.paymentMethod.walletId === undefined ?
+                    selectedCardId.paymentMethod === undefined ?
                     <p>This account has no wallet ID</p>:
                     <p>{selectedCardId.paymentMethod.walletId}</p>
                 }
