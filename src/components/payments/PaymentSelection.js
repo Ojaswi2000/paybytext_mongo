@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../../styles.css'
 import {Button,Alert} from 'rsuite'
+import Confirmation from './Confirmation';
 
 const PaymentSelection = ({selectedCardId}) => {
   const [check, setCheck] = useState(false);
@@ -40,9 +41,12 @@ const PaymentSelection = ({selectedCardId}) => {
         <div className='payment2'>
           <div style={{float:"left"}}>
             <p style={{color:"orange"}}>My Wallet*</p>
-            <select>
+            {
+              selectedCardId.paymentMethod === undefined ? <p style={{fontWeight:"bold"}}>Selected account has no wallet Id</p> :
+              <select>
               <option>{selectedCardId.paymentMethod.walletId}</option>
             </select>
+            }
           </div>
           <div style={{float:"right"}}>
             <Button appearance='primary' color='green'>Add Payment Method</Button>
@@ -62,6 +66,11 @@ const PaymentSelection = ({selectedCardId}) => {
 
         {!check && num===1 && 
         <p>Please select the authorization settings</p>
+        }
+
+        {
+          selectedCardId && num === 1 && !check &&
+          <Confirmation />
         }
     </div>
     
