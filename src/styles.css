@@ -208,3 +208,8 @@ table {
 .payment2{
     justify-content: space-between;
 }
+
+.confirm{
+    border: 3px solid black;
+
+}
