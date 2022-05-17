@@ -71,7 +71,7 @@ const PaymentSelection = ({selectedCardId}) => {
         }
 
         {
-          selectedCardId && num === 1 && !check &&
+          selectedCardId && num === 1 && check &&
           <Confirmation />
         }
     </div>

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Confirmation = () => {
   return (
-    <div>
-        <h4>Hello</h4>
+    <div style={{marginTop:"30px"}}>
+        <h4>Confirmation Screen</h4>
     </div>
   )
 }
