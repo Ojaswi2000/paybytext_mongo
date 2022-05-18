@@ -47,7 +47,10 @@ useEffect(()=>{
         <h3>Billing Center</h3>
         <div className='user'>
           <FaUser />
-          <h6>{location.state.name}</h6>
+          {
+            location.state.name === null ? <h6>Name</h6> :
+            <h6>{location.state.name}</h6>
+          }
         </div>
       </div>
       <hr/>
