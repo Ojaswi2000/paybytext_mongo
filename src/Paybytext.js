@@ -70,12 +70,15 @@ useEffect(()=>{
       </div>
 
       <table>
+        <thead>
         <tr>
           <th>Confirmation Number</th>
           <th>Account Number</th>
           <th>Account Name</th>
           <th>Payment Method</th>
         </tr>
+        </thead>
+        <tbody>
         {accountData.map((account) => {
           return(
           <tr key={account._id}>
@@ -86,7 +89,7 @@ useEffect(()=>{
           </tr>
           )
         })}
-
+      </tbody>
         
       </table>
         
