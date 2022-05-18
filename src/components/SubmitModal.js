@@ -27,7 +27,7 @@ const SubmitModal = ({formData}) => {
 
     <Modal open={open} onClose={handleClose}>
         <Modal.Header>
-          <Modal.Title><h3>Changes Saved</h3></Modal.Title>
+          <Modal.Title><p style={{fontSize:"30px",fontWeight:"bold"}}>Changes Saved</p></Modal.Title>
         </Modal.Header>
         <Modal.Body>
         {
