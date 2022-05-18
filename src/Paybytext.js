@@ -10,24 +10,6 @@ import './styles.css';
 const Paybytext = () => {
 
 
-  const [step, setStep] = useState(0);
-
-  const nextStep = () => {
-      setStep(step+1);
-  }
-  const prevStep = () => {
-      setStep(step-1);
-  } 
-  if(step === 1){
-      <AccountSelection step={step} setStep={setStep}/>
-  }
-  if(step === 2){
-      <PaymentSelection step={step} setStep={setStep}/>
-  }
-
-
-
-
 const location = useLocation();
 
 const [accountData, setAccountData] = useState([]);
@@ -78,7 +60,6 @@ useEffect(()=>{
 
       {isOpen && <AccountSelection isOpen={isOpen} setIsOpen={setIsOpen}
           handleClose={handleClose} handleOpen={handleOpen} accountData={accountData}
-          step={step} nextStep={nextStep}
           />}
 
 
