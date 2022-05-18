@@ -4,7 +4,6 @@ import {FaUser} from 'react-icons/fa'
 import {useLocation} from 'react-router-dom'
 import {Button} from 'rsuite'
 import AccountSelection from './components/payments/AccountSelection';
-import PaymentSelection from './components/payments/PaymentSelection';
 import './styles.css';
 
 const Paybytext = () => {
