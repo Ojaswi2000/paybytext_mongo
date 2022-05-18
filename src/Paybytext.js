@@ -10,6 +10,7 @@ const Paybytext = () => {
 
 
 const location = useLocation();
+console.log(location);
 
 const [accountData, setAccountData] = useState([]);
 

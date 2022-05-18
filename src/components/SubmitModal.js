@@ -10,8 +10,12 @@ const SubmitModal = ({formData}) => {
 
     const navigate = useNavigate();            //send formData to Paybytext route
 
-    const goToPaybytext = () => {
-      navigate("/Administration/paybytext", {state:{name:formData.name}});
+    const goToPaybytext = (e) => {
+      navigate("/Administration/paybytext", {
+        state:{
+          name:formData.name,
+        },
+        });
     }
 
   return (
@@ -35,7 +39,8 @@ const SubmitModal = ({formData}) => {
           Language :<span style={{fontWeight:"bold"}}>{formData.language}</span> <br/>
           Mobile Number :<span style={{fontWeight:"bold"}}>{formData.mobileNo}</span> <br/>
           You have {formData.days} prior to your invoice date.
-          Please <a onClick={goToPaybytext} href='/Administration/paybytext'>Click here</a> to be redirected to create Pay By Text.
+          Please 
+          <a onClick={goToPaybytext} href='/Administration/paybytext'>Click here</a> to be redirected to create Pay By Text.
           </p>:
 
           <p>Please enter your your relevant information</p>
