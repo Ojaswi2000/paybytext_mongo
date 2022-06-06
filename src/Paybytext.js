@@ -2,13 +2,15 @@ import React,{useState, useEffect} from 'react'
 import {FaUser} from 'react-icons/fa'
 //import {BiSearch} from 'react-icons/bi'
 import {useLocation} from 'react-router-dom'
+import { useTranslation } from "react-i18next";
 import {Button} from 'rsuite'
 import AccountSelection from './components/payments/AccountSelection';
+import "./translations/i18n";
 import './styles.css';
 
 const Paybytext = () => {
 
-
+const { t } = useTranslation();
 const location = useLocation();
 console.log(location);
 
@@ -75,7 +77,7 @@ useEffect(()=>{
       <table>
         <thead>
         <tr>
-          <th>Confirmation Number</th>
+          <th>{t("welcome")}</th>
           <th>Account Number</th>
           <th>Account Name</th>
           <th>Payment Method</th>
